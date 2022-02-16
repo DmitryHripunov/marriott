@@ -1,0 +1,89 @@
+@import (reference) "../../less/variables.less";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 8px 0 16px 0;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(70px);
+	z-index: 11;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: 8px;
+	}
+
+	&__nav {
+		display: none;
+	}
+
+	&__location-text {
+		display: none;
+	}
+
+	&__location-svg {
+		display: inline-block;
+	}
+
+	&__burger {
+		margin-left: auto;
+	}
+}
+
+@media (min-width: @laptop) {
+	.header {
+		padding: 8px 0;
+
+		&__logo {
+			margin-right: 32px;
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__nav {
+			display: block;
+			margin-right: 40px;
+		}
+
+		&__address {
+			display: flex;
+			align-items: center;
+		}
+
+		&__tel {
+			font-weight: 800;
+			font-size: 14px;
+			margin-right: 24px;
+			@hover-link();
+		}
+
+		&__location {
+			display: inline-flex;
+			align-items: center;
+			font-weight: 800;
+			font-size: 14px;
+			color: @primary;
+		}
+
+		&__location-svg {
+			margin-right: 8px;
+		}
+		
+		&__location-text {
+			display: inline-block;
+			line-height: 1.5;
+		}
+
+		&__btn {
+			margin-left: auto;
+		}
+	}
+}

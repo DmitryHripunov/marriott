@@ -1,0 +1,123 @@
+@import (reference) "../../less/variables.less";
+
+.nav {
+	&__dropdown-wrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__dropdown {
+		display: none;
+		flex-direction: column;
+		grid-gap: 16px 0;
+	}
+
+	&__item {
+		display: inline-block;
+		padding: 8px;
+		border-radius: 4px;
+		transition: background @transition;
+
+		&:hover {
+			background: @gray-5;
+		}
+
+		&:focus {
+			color: @primary;
+		}
+
+		&_dropdown {
+			position: relative;
+      
+			&::before {
+				position: absolute;
+				content: "";
+				z-index: 1;
+				right: 11px;
+				top: 12px;
+				width: 8px;
+				height: 8px;
+				border: solid @dark;
+				border-width: 0 1px 1px 0;
+				transform: rotate(45deg);
+				transition: transform 200ms ease-in-out;
+			}
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.nav {
+		&__item {
+			cursor: pointer;
+			font-size: 14px;
+			line-height: 1.4;
+
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+
+			&_dropdown {
+				padding-right: 32px;
+			}
+
+			&::before {
+				right: 11px;
+				top: 12px;
+			}
+		}
+
+		&__dropdown-wrapper {
+			&:hover {
+				.nav__item {
+					background: @gray-5;
+				}
+
+				.nav__dropdown {
+					opacity: 1;
+					z-index: 10;
+					pointer-events: unset;
+				}
+			}
+		}
+
+		&__dropdown-item {
+			position: relative;
+			z-index: 1;
+		}
+
+		&__dropdown {
+			display: flex;
+			position: absolute;
+			max-width: 360px;
+			z-index: -10;
+			opacity: 0;
+			pointer-events: none;
+			top: 50px;
+			left: 0;
+			right: -200%;
+			padding: 16px;
+			background-color: @white;
+			transition: opacity @transition;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 20px;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -14px;
+				left: 24px;
+				border-color: transparent transparent @white;
+				border-style: solid;
+				border-width: 0 10px 16px;
+			}
+		}
+	}
+}

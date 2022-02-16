@@ -1,0 +1,29 @@
+@import (reference) "../../less/variables.less";
+
+.title {
+	&_h2 {
+		font-size: 28px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	&_white {
+		color: @white;
+	}
+
+	&_indent-m {
+		margin-bottom: 24px;
+	}
+}
+
+@media (min-width: @laptop) {
+	.title {
+		&_h2 {
+			font-size: 48px;
+		}
+
+		&_indent-m {
+			margin-bottom: 32px;
+		}
+	}
+}

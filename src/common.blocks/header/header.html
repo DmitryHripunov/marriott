@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="/" class="logo">
+          <img class="logo__img" src="../logo/img/logo.png" alt="marriott">
+        </a>
+      </div>
+
+      <div class="header__nav">
+        ${require('../nav/nav.html')}
+      </div>
+
+      <div class="header__address">
+        <a href="tel:+78007008578" class="header__tel">+7 (800) 700-85-78</a>
+
+        <a href="#" class="header__location">
+         <svg class="icon icon_primary icon_size-18 header__location-svg">
+            <use xlink:href="#compass"></use>
+         </svg>
+
+          <span class="header__location-text">
+            Смотреть на карте
+          </span>
+        </a>
+      </div>
+
+      <div class="header__btn">
+        <button class="btn btn_secondary">Оставить заявку</button>
+      </div>
+
+      <div class="header__burger">
+        <button class="burger-btn js-burger-btn">
+          <span class="burger-btn__row"></span>
+          <span class="burger-btn__row"></span>
+          <span class="burger-btn__row"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

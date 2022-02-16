@@ -1,0 +1,140 @@
+@import (reference) "./variables.less";
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Light'), local('InterLight'),
+      url('../assets/fonts/Inter-Light.woff2') format('woff2'),
+      url('../assets/fonts/Inter-Light.woff') format('woff'),
+      url('../assets/fonts/Inter-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Regular'), local('InterRegular'),
+      url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Inter-Regular.woff') format('woff'),
+      url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Medium'), local('InterMedium'),
+      url('../assets/fonts/Inter-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Inter-Medium.woff') format('woff'),
+      url('../assets/fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Bold'), local('InterBold'),
+      url('../assets/fonts/Inter-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Inter-Bold.woff') format('woff'),
+      url('../assets/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'), local('RobotoRegular'),
+      url('../assets/fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Roboto-Regular.woff') format('woff'),
+      url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Medium'), local('RobotoMedium'),
+      url('../assets/fonts/Roboto-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Roboto-Medium.woff') format('woff'),
+      url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Bold'), local('RobotoBold'),
+      url('../assets/fonts/Roboto-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Roboto-Bold.woff') format('woff'),
+      url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  background-color: @white;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @dark;
+
+  @media(min-width: @laptop) {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+select {
+  background-color: transparent;
+}

@@ -1,0 +1,50 @@
+@import (reference) "../../less/variables.less";
+
+.burger-btn {
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__row {
+		display: block;
+		width: 16px;
+		height: 2px;
+		background-color: @dark;
+		margin: auto;
+		transition: cubic-bezier(.26, .1, .27, 1.55) .3s;
+	}
+
+	&__row:not(:last-child) {
+		margin-bottom: 3px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.is-active {
+		pointer-events: none;
+		.burger-btn__row:nth-child(1) {
+			transform: rotate(45deg);
+			margin: 2px 0;
+		}
+
+		.burger-btn__row:not(:first-child) {
+			transform: rotate(-45deg);
+			margin: -4px 0;
+		}
+
+		.burger-btn__row:nth-child(3) {
+			opacity: 0;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.burger-btn {
+	}
+}
