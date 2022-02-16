@@ -7,34 +7,44 @@
         </a>
       </div>
 
-      <div class="header__nav">
-        ${require('../nav/nav.html')}
-      </div>
-
-      <div class="header__address">
-        <a href="tel:+78007008578" class="header__tel">+7 (800) 700-85-78</a>
-
-        <a href="#" class="header__location">
-         <svg class="icon icon_primary icon_size-18 header__location-svg">
-            <use xlink:href="#compass"></use>
-         </svg>
-
-          <span class="header__location-text">
-            Смотреть на карте
-          </span>
-        </a>
-      </div>
-
-      <div class="header__btn">
-        <button class="btn btn_secondary">Оставить заявку</button>
-      </div>
-
-      <div class="header__burger">
-        <button class="burger-btn js-burger-btn">
-          <span class="burger-btn__row"></span>
-          <span class="burger-btn__row"></span>
-          <span class="burger-btn__row"></span>
-        </button>
+      <div class="header__wrapper-mobile">
+        <div class="header__nav js-nav">
+          ${require('../nav/nav.html')}
+        </div>
+  
+        <div class="header__address">
+          <a href="tel:+78007008578" class="header__tel">
+            <svg class="icon icon_dark icon_size-24 header__tel-svg">
+              <use xlink:href="#mobile"></use>
+            </svg>
+  
+            <span class="header__tel-text">
+              +7 (800) 700-85-78
+            </span>
+          </a>
+  
+          <a href="#" class="header__location">
+           <svg class="icon icon_primary icon_size-24 header__location-svg">
+              <use xlink:href="#compass"></use>
+           </svg>
+  
+            <span class="header__location-text">
+              Смотреть на карте
+            </span>
+          </a>
+        </div>
+  
+        <div class="header__btn">
+          <button class="btn btn_secondary">Оставить заявку</button>
+        </div>
+  
+        <div class="header__burger">
+          <button class="burger-btn js-burger-btn">
+            <span class="burger-btn__row"></span>
+            <span class="burger-btn__row"></span>
+            <span class="burger-btn__row"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>

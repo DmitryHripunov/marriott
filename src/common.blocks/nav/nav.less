@@ -9,7 +9,6 @@
 	&__dropdown {
 		display: none;
 		flex-direction: column;
-		grid-gap: 16px 0;
 	}
 
 	&__item {
@@ -42,6 +41,20 @@
 				transform: rotate(45deg);
 				transition: transform 200ms ease-in-out;
 			}
+		}
+	}
+
+	&__dropdown-item {
+		padding: 8px 16px;
+		background: transparent;
+		transition: background @transition;
+
+		&:hover {
+			background: @secondary-light;
+		}
+
+		&:active {
+			color: @primary;
 		}
 	}
 }
@@ -96,17 +109,20 @@
 			top: 50px;
 			left: 0;
 			right: -200%;
-			padding: 16px;
+			padding: 8px 0;
+			border-radius: 4px;
 			background-color: @white;
+			@shadow-lg();
 			transition: opacity @transition;
 
 			&::after {
 				content: "";
 				position: absolute;
-				bottom: 20px;
+				bottom: 16px;
 				left: 0;
 				height: 100%;
-				width: 100%;
+				width: 50%;
+				z-index: 0;
 			}
 
 			&::before {
