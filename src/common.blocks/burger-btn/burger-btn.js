@@ -3,6 +3,8 @@ import hideEl from '../utils/hideEl';
 
 const burgerBtn = document.querySelector('.js-burger-btn');
 const navContent = document.querySelector('.js-nav');
+// const header = document.querySelector('.js-header');
+const close = document.querySelector('.js-close');
 const bodyEl = document.body;
 
 if (burgerBtn) {
@@ -18,7 +20,17 @@ if (burgerBtn) {
   const handleClosure = event =>
     !navContent.contains(event.target) && hideEl(burgerBtn, navContent, bodyEl);
 
+  close.addEventListener('click', () => {
+    hideEl(burgerBtn, navContent, bodyEl);
+  });
+
   window.addEventListener('click', handleClosure);
   window.addEventListener('focusin', handleClosure);
 }
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1024) {
+    hideEl(burgerBtn, navContent, bodyEl);
+  }
+});
 

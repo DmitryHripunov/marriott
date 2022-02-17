@@ -7,17 +7,81 @@ ${require('./common.blocks/head/head.html')}
   ${require('./common.blocks/header/header.html')}
 
   <main class="main">
-    <section class="hero" 
-    style="background: linear-gradient(0deg, rgba(35, 50, 63, .1), rgba(35, 50, 63, .1)),
-      url('${require('./common.blocks/hero/img/hero.jpg')}') center/cover"
-    >
-      
-      <div class="hero__container">
-        <h1 class="hero__title">Сеть отелей Marriott Hotels & Resorts</h1>
+    <div class="page-section">
+      <section class="hero" 
+      style="background: linear-gradient(0deg, rgba(35, 50, 63, .1), rgba(35, 50, 63, .1)),
+        url('${require('./common.blocks/hero/img/hero.jpg')}') center/cover"
+      >
+        
+        <div class="hero__container">
+          <h1 class="hero__title">Сеть отелей Marriott Hotels & Resorts</h1>
+  
+          <h2 class="hero__subtitle">Сочи Марриотт Красная Поляна</h2>
 
-        <h2 class="title title_white title_h2 title_indent-m">Сочи Марриотт Красная Поляна</h2>
+          <div class="hero__form">
+            <form class="form-date">
+
+            </form>
+          </div>
+
+          <div class="hero__awards">
+            <div class="awards">
+              <div class="awards__item">
+                <img class="awards__img" src="${require('./common.blocks/awards/img/award-1.png')}" alt="#">
+
+                <h3 class="awards__name">Golden Pony Awards 2019</h3>
+              </div>
+
+              <div class="awards__item">
+                <img class="awards__img" src="${require('./common.blocks/awards/img/award-2.png')}" alt="#">
+
+                <h3 class="awards__name">World Luxury Hotel Awards 2019, 2020</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-section">
+      <div class="container">
+        <div class="adv">
+          <ul class="adv__list">
+            <li class="adv__item">
+              <svg class="adv__svg">
+                <use xlink:href="#adv-1"/>
+              </svg>
+
+              <div class="adv__name">Обладатель международных наград</div>
+            </li>
+
+            <li class="adv__item">
+              <svg class="adv__svg">
+                <use xlink:href="#adv-2"/>
+              </svg>
+
+              <div class="adv__name">Спа с крытым и открытым бассейнами</div>
+            </li>
+
+            <li class="adv__item">
+              <svg class="adv__svg">
+                <use xlink:href="#adv-3"/>
+              </svg>
+
+              <div class="adv__name">Служба нянь на территории отеля</div>
+            </li>
+
+            <li class="adv__item">
+              <svg class="adv__svg">
+                <use xlink:href="#adv-4"/>
+              </svg>
+
+              <div class="adv__name">Внутренний переход в казино на территории отеля</div>
+            </li>
+          </ul>  
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 
 </body>

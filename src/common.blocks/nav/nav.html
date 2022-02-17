@@ -1,8 +1,14 @@
 <nav class="nav">
   <div class="nav__dropdown-wrapper">
-    <a class="nav__item nav__item_dropdown" href="#">Номера и цены</a>  
+    <a class="nav__item nav__item_dropdown" href="#">Номера и цены</a>
 
-    <div class="nav__dropdown">
+    <button class="nav__btn js-dropdown-btn">
+      <svg class="icon icon_color-dark nav__svg">
+        <use xlink:href="#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav__dropdown js-dropdown-content">
       <a class="nav__dropdown-item" href="#">Номер Делюкс</a>
       <a class="nav__dropdown-item" href="#">Номер Люкс</a>
       <a class="nav__dropdown-item" href="#">Семейный однокомнатный полулюкс</a>
@@ -15,13 +21,19 @@
       <a class="nav__dropdown-item" href="#">Президентский люкс</a>
     </div>
   </div>
-  
+
   <div class="nav__dropdown-wrapper">
     <a href="#" class="nav__item nav__item_dropdown">
       Питание
     </a>
 
-    <div class="nav__dropdown">
+    <button class="nav__btn js-dropdown-btn">
+      <svg class="icon icon_color-dark nav__svg">
+        <use xlink:href="#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav__dropdown js-dropdown-content">
       <a class="nav__dropdown-item" href="#">Ресторан L’Olivo</a>
       <a class="nav__dropdown-item" href="#">Лобби-бар</a>
     </div>
