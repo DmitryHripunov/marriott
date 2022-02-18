@@ -1,0 +1,147 @@
+@import (reference) "../../less/variables.less";
+
+.grid {
+  display: grid;
+	grid-template-columns: 1fr;
+  grid-template-rows: 120px 470px 220px 470px 220px 220px;
+	grid-gap: 16px;
+
+  &_with_description {
+    grid-template-rows: 120px 470px 220px 470px 1fr;
+  }
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+  &__col {
+    position: relative;
+		overflow: hidden;
+    width: 100%;
+  }
+
+  &__item {
+		display: block;
+		width: 100%;
+		height: 100%;
+    transition: transform 1.5s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.2);
+    }
+	}
+
+  &__text-wrapper {
+    position: absolute;
+    pointer-events: none;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    bottom: 16px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 18px;
+    color: @white;
+  }
+
+  &__desc {
+    &:not(:last-child) {
+		  margin-bottom: 8px;
+	  }
+  }
+}
+
+@media (min-width: @tablet) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-rows: repeat(2, 200px);
+
+    &_with_description {
+      .grid__col {
+        &_5 {
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 4;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .grid {
+    grid-gap: 32px;
+    grid-template-rows: repeat(4, 260px);
+
+    &_with_description {
+      grid-template-rows: repeat(3, 260px);
+      .grid__col {
+        &_5 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 5;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+		  margin-bottom: 32px;
+	  }
+
+    &__col {
+      &_1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &_2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+  
+      &_3 {
+      }
+  
+      &_4 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+  
+      &_5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+  
+      &_6 {
+      }
+    }
+
+    &__text-wrapper {
+      left: 32px;
+      right: 32px;
+      top: 32px;
+      bottom: 32px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__desc {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
