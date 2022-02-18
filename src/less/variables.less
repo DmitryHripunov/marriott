@@ -48,15 +48,24 @@
 @transition: 200ms ease-in-out;
 @bezier: .2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
+//links
+@font-size-link: {
+  @media(min-width: @mobile) {
+    font-size: 12px;
+    font-weight: 800;
+    color: @primary;
+  }
+
+  @media (min-width: @laptop) {
+    font-size: 14px;
+  }
+}
+
 @hover-link: {
   text-decoration: none;
   transition: color @transition;
   
   &:hover {
-    color: @primary;
-  }
-
-  &:active {
     color: @primary-dark;
   }
 }

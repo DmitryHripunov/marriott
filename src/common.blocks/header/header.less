@@ -56,6 +56,8 @@
 	}
 
   &__location-text {
+    @font-size-link();
+    @hover-link();
     display: none;
   }
 
@@ -133,9 +135,6 @@
     &__location {
       display: inline-flex;
       align-items: center;
-      font-weight: 800;
-      font-size: 14px;
-      color: @primary;
       white-space: nowrap;
     }
 

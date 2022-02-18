@@ -1,0 +1,59 @@
+@import (reference) "../../less/variables.less";
+
+.features {
+  &__img {
+    min-height: 360px;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    position: relative;
+    background: @white;
+    @shadow-lg();
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: -210px;
+    width: 100%;
+  }
+
+  &__desc {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    display: block;
+    @hover-link();
+    @font-size-link();
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .features {
+    &__img {
+      margin: 0 auto;
+      padding: 0 16px;
+      max-width: 1248px;
+      width: 100%;
+      max-height: 620px;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+    }
+
+    &__content {
+      border-radius: 20px;
+      padding: 32px;
+      margin-top: -265px;
+      margin-right: 100px;
+      max-width: 590px;
+    }
+  }
+}
