@@ -28,13 +28,12 @@
 // require("expose-loader?slick!slick-carousel");
 
 // swiper slider
-// require("swiper/dist/css/swiper.css");
-// require("expose-loader?Swiper!swiper/dist/js/swiper.js");
+require("swiper/dist/css/swiper.css");
+require("expose-loader?Swiper!swiper/dist/js/swiper.js");
 
 // vue.js
 // import Vue from 'vue';
 // window.Vue = Vue;
-
 
 // magnific-popup
 // require("magnific-popup/dist/magnific-popup.css");

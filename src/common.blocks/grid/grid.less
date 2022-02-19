@@ -3,11 +3,14 @@
 .grid {
   display: grid;
 	grid-template-columns: 1fr;
-  grid-template-rows: 120px 470px 220px 470px 220px 220px;
 	grid-gap: 16px;
 
-  &_with_description {
-    grid-template-rows: 120px 470px 220px 470px 1fr;
+  &_has_five_elements {
+    .grid__col {
+      &_img {
+        height: 220px;
+      }
+    }
   }
 
 	&:not(:last-child) {
@@ -18,6 +21,25 @@
     position: relative;
 		overflow: hidden;
     width: 100%;
+
+    &_1 .grid__item {
+      min-height: 120px;
+    }
+    &_2 .grid__item {
+      min-height: 470px;
+    }
+    &_3 .grid__item {
+      min-height: 220px;
+    }
+    &_4 .grid__item {
+      min-height: 470px;
+    }
+    &_5 .grid__item {
+      min-height: 220px;
+    }
+    &_6 .grid__item {
+      min-height: 220px;
+    }
   }
 
   &__item {
@@ -45,12 +67,6 @@
     font-size: 18px;
     color: @white;
   }
-
-  &__desc {
-    &:not(:last-child) {
-		  margin-bottom: 8px;
-	  }
-  }
 }
 
 @media (min-width: @tablet) {
@@ -58,13 +74,41 @@
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     grid-template-rows: repeat(2, 200px);
 
-    &_with_description {
+  &__col {
+    &_1 .grid__item {
+      min-height: unset;
+    }
+    &_2 .grid__item {
+      min-height: unset;
+    }
+    &_3 .grid__item {
+      min-height: unset;
+    }
+    &_4 .grid__item {
+      min-height: unset;
+    }
+    &_5 .grid__item {
+      min-height: unset;
+    }
+    &_6 .grid__item {
+      min-height: unset;
+    }
+  }
+
+    &_has_five_elements {
+       grid-template-rows: 200px 1fr;
       .grid__col {
-        &_5 {
+        &_4 {
+          height: 200px;
+        }
+        &_desc {
           grid-column-start: 2;
           grid-column-end: 4;
           grid-row-start: 2;
-          grid-row-end: 4;
+          grid-row-end: 3;
+        }
+        &_img {
+          height: 200px;
         }
       }
     }
@@ -76,14 +120,25 @@
     grid-gap: 32px;
     grid-template-rows: repeat(4, 260px);
 
-    &_with_description {
+    &_has_five_elements {
       grid-template-rows: repeat(3, 260px);
       .grid__col {
-        &_5 {
+        &_4 {
+          height: auto;
+        }
+        &_desc {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 3;
           grid-row-end: 5;
+        }
+
+        &_img {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          height: auto;
         }
       }
     }
@@ -105,10 +160,7 @@
         grid-row-start: 1;
         grid-row-end: 3;
       }
-  
-      &_3 {
-      }
-  
+
       &_4 {
         grid-column-start: 3;
         grid-column-end: 4;
@@ -122,9 +174,6 @@
         grid-row-start: 3;
         grid-row-end: 5;
       }
-  
-      &_6 {
-      }
     }
 
     &__text-wrapper {
@@ -136,12 +185,6 @@
 
     &__title {
       font-size: 24px;
-    }
-
-    &__desc {
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
     }
   }
 }

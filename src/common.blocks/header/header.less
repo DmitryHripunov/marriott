@@ -56,8 +56,6 @@
 	}
 
   &__location-text {
-    @font-size-link();
-    @hover-link();
     display: none;
   }
 
@@ -69,6 +67,8 @@
 	&__location {
 		display: inline-block;
 		line-height: 1;
+    @font-size-link();
+    @hover-link();
 	}
 
   &__tel-text {
@@ -128,9 +128,13 @@
       align-items: center;
       font-weight: 800;
       font-size: 14px;
-      @hover-link();
       white-space: nowrap;
     }
+    
+    &__tel-text {
+       @hover-link();
+       color: @dark;
+     }
 
     &__location {
       display: inline-flex;

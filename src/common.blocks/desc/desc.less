@@ -1,0 +1,15 @@
+@import (reference) "../../less/variables.less";
+
+.desc {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .desc {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

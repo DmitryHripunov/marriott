@@ -98,7 +98,7 @@ ${require('./common.blocks/head/head.html')}
                 делюксы повышенной комфортности, люксы и семейные апартаменты с кухней.
               </p>
 
-              <a href="#" class="features__link">Подробнее об отеле</a>
+              <a href="#" class="link">Подробнее об отеле</a>
             </div>
           </div>
         </div>
@@ -171,9 +171,10 @@ ${require('./common.blocks/head/head.html')}
         </div>
 
         <!-- модификатор для второй сетки из 5 элементов
-           в которой последеий элемент текст 
+           если 5 элемент текст, модификатор grid__col_desc
+           если фото, модификатор grid__col_img
         -->
-        <div class="grid grid_with_description">
+        <div class="grid grid_has_five_elements">
           <div class="grid__col grid__col_1">
             <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
                              url('${require('./common.blocks/grid/img/room-1.jpg')}') center/cover no-repeat">
@@ -214,8 +215,18 @@ ${require('./common.blocks/head/head.html')}
             </div>
           </div>
 
-          <div class="grid__col grid__col_5">
-            <p class="grid__desc">
+          <!-- <div class="grid__col grid__col_5 grid__col_img">
+            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
+                          url('${require('./common.blocks/grid/img/room-2.jpg')}') center/cover no-repeat">
+            </a>
+          
+            <div class="grid__text-wrapper">
+              <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
+            </div>
+          </div> -->
+
+          <div class="grid__col grid__col_5 grid__col_desc">
+            <p class="desc">
               Номерной фонд «Сочи Марриотт Красная Поляна» самый большой среди отелей Курорта Красная Поляна.
               428 номеров представлены
               категориями «делюкс» (333 номера), «люкс» (44 номера), «семейный люкс» (47 номеров), «пентхаус» (3 номера)
@@ -223,7 +234,7 @@ ${require('./common.blocks/head/head.html')}
               по здоровью.
             </p>
 
-            <p class="grid__desc">
+            <p class="desc">
               Эклектика интерьеров включает элементы минимализма и стиля баухаус. Природные бежевые и коричневые оттенки
               формируют
               ненавязчивое пространство для комфорта и отдыха в окружении горных вершин. Оснащение номеров полностью
@@ -241,6 +252,165 @@ ${require('./common.blocks/head/head.html')}
       <section class="benefits">
         <div class="container">
           <h2 class="title title_h2 title_center title_indent-md">Уникальный отель в горах на Красной Поляне</h2>
+
+          <div class="benefits__wrapper">
+            <div class="benefits__element benefits__element_reverse">
+              <div class="benefits__gallery">
+                <div class="swiper js-swiper">
+                  <div class="swiper-container js-benefits-swiper">
+                    <div class="swiper-wrapper ">
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="benefits__pagination js-benefits-pagination"></div>
+
+                    <div class="benefits__button-prev js-benefits-prev"></div>
+                    <div class="benefits__button-next js-benefits-next"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits__info">
+                <h3 class="title title_indent-xs title_h3">Спа комплекс Soul SPA</h3>
+
+                <p class="desc">
+                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                  крытый бассейн
+                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                  красоты и зону
+                  релаксации
+                </p>
+
+                <p class="desc">
+                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                  восстановлению
+                  жизненного баланса
+                </p>
+
+                <a class="link" href="#">Узнать больше</a>
+              </div>
+            </div>
+
+            <div class="benefits__element">
+              <div class="benefits__gallery">
+                <div class="swiper js-swiper">
+                  <div class="swiper-container js-benefits-swiper">
+                    <div class="swiper-wrapper ">
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
+                            alt="#">
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="benefits__pagination js-benefits-pagination"></div>
+
+                    <div class="benefits__button-prev js-benefits-prev"></div>
+                    <div class="benefits__button-next js-benefits-next"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits__info">
+                <h3 class="title title_indent-xs title_h3">Сезонные предложения в лобби баре отеля</h3>
+
+                <p class="desc">
+                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                  крытый бассейн
+                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                  красоты и зону
+                  релаксации
+                </p>
+
+                <p class="desc">
+                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                  восстановлению
+                  жизненного баланса
+                </p>
+
+                <p class="desc">
+                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                  крытый бассейн
+                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                  красоты и зону
+                  релаксации
+                </p>
+
+                <p class="desc">
+                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                  восстановлению
+                  жизненного баланса
+                </p>
+
+                <a class="link" href="#">Узнать больше</a>
+              </div>
+            </div>
+
+            <div class="benefits__element benefits__element_reverse">
+              <div class="benefits__gallery">
+                <div class="swiper js-swiper">
+                  <div class="swiper-container js-benefits-swiper">
+                    <div class="swiper-wrapper ">
+                      <div class="swiper-slide">
+                        <span class="benefits__img-wrapper">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}" alt="#">
+                        </span>
+                      </div>
+                    </div>
+            
+                    <div class="benefits__pagination js-benefits-pagination"></div>
+            
+                    <div class="benefits__button-prev js-benefits-prev"></div>
+                    <div class="benefits__button-next js-benefits-next"></div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="benefits__info">
+                <h3 class="title title_indent-xs title_h3">Ресторан The River</h3>
+            
+                <p class="desc">
+                  Роскошный
+                </p>
+
+                <a class="link" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefits__btn-wrapper">
+            <button class="btn btn_primary">Заселиться в отель</button>
+          </div>
         </div>
       </section>
     </div>
