@@ -61,7 +61,7 @@
     z-index: 1;
     cursor: pointer;
     top: 0;
-    width: 30px;
+    width: 26px;
     height: calc(100% - 22px);
     transition: opacity .3s ease-in-out;
     opacity: 0;
@@ -160,6 +160,25 @@
 
     &__info {
       margin: auto 0;
+    }
+
+    .benefits__button-prev::after,
+    .benefits__button-next::after {
+      width: 48px;
+    }
+
+    .benefits__button-prev::before,
+    .benefits__button-next::before {
+      width: 20px;
+      height: 20px;
+    }
+
+    .benefits__button-prev::before {
+      left: 16px;
+    }
+
+    .benefits__button-next::before {
+      right: 16px;
     }
 
     &__btn-wrapper {

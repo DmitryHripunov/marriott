@@ -383,22 +383,23 @@ ${require('./common.blocks/head/head.html')}
                     <div class="swiper-wrapper ">
                       <div class="swiper-slide">
                         <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}" alt="#">
+                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                            alt="#">
                         </span>
                       </div>
                     </div>
-            
+
                     <div class="benefits__pagination js-benefits-pagination"></div>
-            
+
                     <div class="benefits__button-prev js-benefits-prev"></div>
                     <div class="benefits__button-next js-benefits-next"></div>
                   </div>
                 </div>
               </div>
-            
+
               <div class="benefits__info">
                 <h3 class="title title_indent-xs title_h3">Ресторан The River</h3>
-            
+
                 <p class="desc">
                   Роскошный
                 </p>
@@ -413,6 +414,71 @@ ${require('./common.blocks/head/head.html')}
           </div>
         </div>
       </section>
+    </div>
+
+    <div class="page-section">
+      <div class="container">
+        <section class="trace">
+          <h2 class="title title_h2 title_indent-md">Как добраться до отеля</h2>
+
+          <div class="trace__wrapper">
+            <div class="trace__frame is-active js-trace-frame" id="transfer">
+              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-1.jpg')}" alt="#">
+            </div>
+
+            <div class="trace__frame js-trace-frame" id="public-transport">
+              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-2.jpg')}" alt="#">
+            </div>
+
+            <div class="trace__frame js-trace-frame" id="electric-train">
+              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-3.jpg')}" alt="#">
+            </div>
+
+            <ol class="trace__list">
+              <li class="trace__item is-active">
+                <a href="#transfer" class="trace__link js-trace-link">
+                  <div class="title title_h4 title_indent-xs trace__title">Трансфер</div>
+
+                  <p class="desc trace__desc">
+                    Отель Сочи Марриотт предоставляет трансфер Аэропорт-Отель-Аэропорт. Заказать трансфер необходимо
+                    не менее,
+                    чем за 24 часа до заезда/выезда.Можно также оплатить индивидуальный трансфер (три вида автомобилей —
+                    до 3,
+                    до 6 и до 17 человек) по 100% предоплате. Детям предоставляется детское кресло.
+                  </p>
+                </a>
+              </li>
+
+              <li class="trace__item">
+                <a href="#public-transport" class="trace__link js-trace-link">
+                  <div class="title title_h4 title_indent-xs trace__title">Общественный транспорт</div>
+
+                  <p class="desc trace__desc">
+                    По «старой трассе» от Аэропорта и из центра Сочи до отеля идут автобусы 105 и 105с. Ближайшие
+                    к отелю станции
+                    электрички — Роза хутор и Эсто-Садок, но от них также придётся ехать на 105 автобусе. Пешком —
+                    около получаса от любой
+                    из них.
+                  </p>
+                </a>
+              </li>
+
+              <li class="trace__item">
+                <a href="#electric-train" class="trace__link js-trace-link ">
+                  <div class="title title_h4 title_indent-xs trace__title">Электропоезд «Ласточка»</div>
+
+                  <p class="desc trace__desc">
+                    От ж/д станций в Сочи, Мацесте, Хосте и Адлере до Красной Поляны (до станции Эсто-Садок) курсируют
+                    фирменные
+                    электропоезда «Ласточка». Время в пути от станции «Сочи» около 1 часа.
+                  </p>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+        </section>
+      </div>
     </div>
   </main>
 
