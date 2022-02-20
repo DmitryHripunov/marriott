@@ -44,6 +44,13 @@ module.exports = {
   watch: isDevelopment,
   devtool: isDevelopment ? 'inline-source-map' : false,
   devServer: {
+    proxy: {
+      '/api': {
+        // target: 'http://organic-zone.demo.onlinebees.ru',
+        // logLevel: 'debug',
+        // changeOrigin: true,
+      },
+    },
     contentBase: path.join(__dirname, 'src/static/'),
     noInfo: isDevelopment,
     overlay: {
@@ -110,7 +117,7 @@ module.exports = {
     },
 
     {
-      test: /\.(png|jpe?g|gif)$/,
+      test: /\.(png|jpe?g|gif|webp)$/,
       loaders: [{
         loader: 'file-loader',
         options: {
@@ -233,31 +240,25 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
       // chunksSortMode: 'manual',
       // chunks: ['vendor', 'common'],
     }),
-    // для добавления отдельной html страницы нужно подключить новый HtmlWebpackPlugin
-    /* new HtmlWebpackPlugin({
-      template: 'src/test.html',
-      filename: 'test.html',
-      // chunksSortMode: 'manual',
-      // chunks: ['vendor', 'common'],
-    }), */
   ],
 };
 
 if (!isDevelopment) {
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false,
-      },
-    }));
-  module.exports.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: "'production'",
-      },
-    }));
+  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+    compress: {
+      warnings: false,
+    },
+  }));
+  module.exports.plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: "'production'",
+    },
+  }));
 }

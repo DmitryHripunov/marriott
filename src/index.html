@@ -4,748 +4,752 @@
 ${require('./common.blocks/head/head.html')}
 
 <body class="body">
-  ${require('./common.blocks/header/header.html')}
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+  
+    <main class="main">
+      <div class="page-section">
+        <section class="hero"
+          style="background: linear-gradient(0deg, rgba(35, 50, 63, .1), rgba(35, 50, 63, .1))">
 
-  <main class="main">
-    <div class="page-section">
-      <section class="hero" style="background: linear-gradient(0deg, rgba(35, 50, 63, .1), rgba(35, 50, 63, .1)),
-        url('${require('./common.blocks/hero/img/hero.jpg')}') center/cover">
+          <!-- url('${require('./common.blocks/hero/img/hero.jpg')}') center/cover no-repeat -->
+          <img class="hero__banner" src="${require('./common.blocks/hero/img/hero.jpg')}" alt="#">
 
-        <div class="hero__container">
-          <h1 class="hero__title">Сеть отелей Marriott Hotels & Resorts</h1>
-
-          <h2 class="hero__subtitle">Сочи Марриотт Красная Поляна</h2>
-
-          <div class="hero__form">
-            <form class="form-date">
-
-            </form>
-          </div>
-
-          <div class="hero__awards">
-            <div class="awards">
-              <div class="awards__item">
-                <img class="awards__img" src="${require('./common.blocks/awards/img/award-1.png')}" alt="#">
-
-                <h3 class="awards__name">Golden Pony Awards 2019</h3>
-              </div>
-
-              <div class="awards__item">
-                <img class="awards__img" src="${require('./common.blocks/awards/img/award-2.png')}" alt="#">
-
-                <h3 class="awards__name">World Luxury Hotel Awards 2019, 2020</h3>
-              </div>
+          <div class="hero__container">
+            <h1 class="hero__title">Сеть отелей Marriott Hotels & Resorts</h1>
+  
+            <h2 class="hero__subtitle">Сочи Марриотт Красная Поляна</h2>
+  
+            <div class="hero__form">
+              <booking></booking>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="page-section">
-      <div class="container">
-        <div class="adv">
-          <ul class="adv__list">
-            <li class="adv__item">
-              <svg class="adv__svg">
-                <use xlink:href="#adv-1" />
-              </svg>
-
-              <div class="adv__name">Обладатель международных наград</div>
-            </li>
-
-            <li class="adv__item">
-              <svg class="adv__svg">
-                <use xlink:href="#adv-2" />
-              </svg>
-
-              <div class="adv__name">Спа с крытым и открытым бассейнами</div>
-            </li>
-
-            <li class="adv__item">
-              <svg class="adv__svg">
-                <use xlink:href="#adv-3" />
-              </svg>
-
-              <div class="adv__name">Служба нянь на территории отеля</div>
-            </li>
-
-            <li class="adv__item">
-              <svg class="adv__svg">
-                <use xlink:href="#adv-4" />
-              </svg>
-
-              <div class="adv__name">Внутренний переход в казино на территории отеля</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-section">
-      <div class="features">
-        <img class="features__img" src="${require('./common.blocks/features/img/features.jpg')}" alt="#">
-
-        <div class="container">
-          <div class="features__wrapper">
-            <div class="features__content">
-              <h2 class="title title_h2 title_indent-xs">Сочи Марриотт Красная поляна</h2>
-
-              <p class="features__desc">
-                «Сочи Марриотт Красная Поляна» (Sochi Marriott Krasnaya Polyana) – пятизвёздочный отель премиум-класса,
-                расположенный
-                на Поляне 540.Инфраструктура отеля отвечает запросам на семейный отдых в горах высокого уровня.
-                428 номеров включают
-                делюксы повышенной комфортности, люксы и семейные апартаменты с кухней.
-              </p>
-
-              <a href="#" class="link">Подробнее об отеле</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-section">
-      <div class="container">
-        <div class="grid">
-          <div class="grid__col grid__col_1">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-             url('${require('./common.blocks/grid/img/room-1.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Номер Люкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_2">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-              url('${require('./common.blocks/grid/img/room-2.jpg')}')  center/ cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Номер Делюкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_3">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-              url('${require('./common.blocks/grid/img/room-3.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный однокомнатный полулюкс</span>
-            </div>
-          </div>
-
-
-          <div class="grid__col grid__col_4">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-              url('${require('./common.blocks/grid/img/room-4.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_5">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-              url('${require('./common.blocks/grid/img/room-5.jpg')}')  center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Пентхаус</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_6">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-              url('${require('./common.blocks/grid/img/room-6.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный люкс «Гранд» с тремя спальнями</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- модификатор для второй сетки из 5 элементов
-           если 5 элемент текст, модификатор grid__col_desc
-           если фото, модификатор grid__col_img
-        -->
-        <div class="grid grid_has_five_elements">
-          <div class="grid__col grid__col_1">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-                             url('${require('./common.blocks/grid/img/room-1.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Номер Люкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_2">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-                              url('${require('./common.blocks/grid/img/room-2.jpg')}')  center/ cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Номер Делюкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_3">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-                              url('${require('./common.blocks/grid/img/room-3.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный однокомнатный полулюкс</span>
-            </div>
-          </div>
-
-          <div class="grid__col grid__col_4">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-                url('${require('./common.blocks/grid/img/room-4.jpg')}') center/cover no-repeat">
-            </a>
-
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
-            </div>
-          </div>
-
-          <!-- <div class="grid__col grid__col_5 grid__col_img">
-            <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%),
-                          url('${require('./common.blocks/grid/img/room-2.jpg')}') center/cover no-repeat">
-            </a>
-          
-            <div class="grid__text-wrapper">
-              <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
-            </div>
-          </div> -->
-
-          <div class="grid__col grid__col_5 grid__col_desc">
-            <p class="desc">
-              Номерной фонд «Сочи Марриотт Красная Поляна» самый большой среди отелей Курорта Красная Поляна.
-              428 номеров представлены
-              категориями «делюкс» (333 номера), «люкс» (44 номера), «семейный люкс» (47 номеров), «пентхаус» (3 номера)
-              и «президентский люкс» (1 номер), в том числе номерами для гостей с ограниченными возможностями
-              по здоровью.
-            </p>
-
-            <p class="desc">
-              Эклектика интерьеров включает элементы минимализма и стиля баухаус. Природные бежевые и коричневые оттенки
-              формируют
-              ненавязчивое пространство для комфорта и отдыха в окружении горных вершин. Оснащение номеров полностью
-              соответствует
-              пятизвёздочным стандартам международного бренда Marriott, включая премиальное постельное бельё,
-              изготовленное на заказ.
-              Визитная карточка каждого номера отеля — балконы с панорамными видами на Кавказские горы.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-section">
-      <section class="benefits">
-        <div class="container">
-          <h2 class="title title_h2 title_center title_indent-md">Уникальный отель в горах на Красной Поляне</h2>
-
-          <div class="benefits__wrapper">
-            <div class="benefits__element benefits__element_reverse">
-              <div class="benefits__gallery">
-                <div class="swiper js-swiper">
-                  <div class="swiper-container js-benefits-swiper">
-                    <div class="swiper-wrapper ">
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="benefits__pagination js-benefits-pagination"></div>
-
-                    <div class="benefits__button-prev js-benefits-prev"></div>
-                    <div class="benefits__button-next js-benefits-next"></div>
-                  </div>
+  
+            <div class="hero__awards">
+              <div class="awards">
+                <div class="awards__item">
+                  <img class="awards__img" src="${require('./common.blocks/awards/img/award-1.png')}" alt="#">
+  
+                  <h3 class="awards__name">Golden Pony Awards 2019</h3>
+                </div>
+  
+                <div class="awards__item">
+                  <img class="awards__img" src="${require('./common.blocks/awards/img/award-2.png')}" alt="#">
+  
+                  <h3 class="awards__name">World Luxury Hotel Awards 2019, 2020</h3>
                 </div>
               </div>
-
-              <div class="benefits__info">
-                <h3 class="title title_indent-xs title_h3">Спа комплекс Soul SPA</h3>
-
-                <p class="desc">
-                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
-                  крытый бассейн
-                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
-                  красоты и зону
-                  релаксации
-                </p>
-
-                <p class="desc">
-                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
-                  восстановлению
-                  жизненного баланса
-                </p>
-
-                <a class="link" href="#">Узнать больше</a>
-              </div>
-            </div>
-
-            <div class="benefits__element">
-              <div class="benefits__gallery">
-                <div class="swiper js-swiper">
-                  <div class="swiper-container js-benefits-swiper">
-                    <div class="swiper-wrapper ">
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="benefits__pagination js-benefits-pagination"></div>
-
-                    <div class="benefits__button-prev js-benefits-prev"></div>
-                    <div class="benefits__button-next js-benefits-next"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="benefits__info">
-                <h3 class="title title_indent-xs title_h3">Сезонные предложения в лобби баре отеля</h3>
-
-                <p class="desc">
-                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
-                  крытый бассейн
-                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
-                  красоты и зону
-                  релаксации
-                </p>
-
-                <p class="desc">
-                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
-                  восстановлению
-                  жизненного баланса
-                </p>
-
-                <p class="desc">
-                  Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
-                  крытый бассейн
-                  с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
-                  красоты и зону
-                  релаксации
-                </p>
-
-                <p class="desc">
-                  Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
-                  восстановлению
-                  жизненного баланса
-                </p>
-
-                <a class="link" href="#">Узнать больше</a>
-              </div>
-            </div>
-
-            <div class="benefits__element benefits__element_reverse">
-              <div class="benefits__gallery">
-                <div class="swiper js-swiper">
-                  <div class="swiper-container js-benefits-swiper">
-                    <div class="swiper-wrapper ">
-                      <div class="swiper-slide">
-                        <span class="benefits__img-wrapper">
-                          <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
-                            alt="#">
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="benefits__pagination js-benefits-pagination"></div>
-
-                    <div class="benefits__button-prev js-benefits-prev"></div>
-                    <div class="benefits__button-next js-benefits-next"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="benefits__info">
-                <h3 class="title title_indent-xs title_h3">Ресторан The River</h3>
-
-                <p class="desc">
-                  Роскошный
-                </p>
-
-                <a class="link" href="#">Узнать больше</a>
-              </div>
             </div>
           </div>
-
-          <div class="benefits__btn-wrapper">
-            <button class="btn btn_primary">Заселиться в отель</button>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="page-section">
-      <div class="container">
-        <section class="trace">
-          <h2 class="title title_h2 title_indent-md">Как добраться до отеля</h2>
-
-          <div class="trace__wrapper">
-            <div class="trace__frame is-active js-trace-frame" id="transfer">
-              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-1.jpg')}" alt="#">
-            </div>
-
-            <div class="trace__frame js-trace-frame" id="public-transport">
-              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-2.jpg')}" alt="#">
-            </div>
-
-            <div class="trace__frame js-trace-frame" id="electric-train">
-              <img class="trace__img" src="${require('./common.blocks/trace/img/trace-3.jpg')}" alt="#">
-            </div>
-
-            <ol class="trace__list">
-              <li class="trace__item is-active">
-                <a href="#transfer" class="trace__link js-trace-link">
-                  <div class="title title_h4 title_indent-xs trace__title">Трансфер</div>
-
-                  <p class="desc trace__desc">
-                    Отель Сочи Марриотт предоставляет трансфер Аэропорт-Отель-Аэропорт. Заказать трансфер необходимо
-                    не менее,
-                    чем за 24 часа до заезда/выезда.Можно также оплатить индивидуальный трансфер (три вида автомобилей —
-                    до 3,
-                    до 6 и до 17 человек) по 100% предоплате. Детям предоставляется детское кресло.
-                  </p>
-                </a>
-              </li>
-
-              <li class="trace__item">
-                <a href="#public-transport" class="trace__link js-trace-link">
-                  <div class="title title_h4 title_indent-xs trace__title">Общественный транспорт</div>
-
-                  <p class="desc trace__desc">
-                    По «старой трассе» от Аэропорта и из центра Сочи до отеля идут автобусы 105 и 105с. Ближайшие
-                    к отелю станции
-                    электрички — Роза хутор и Эсто-Садок, но от них также придётся ехать на 105 автобусе. Пешком —
-                    около получаса от любой
-                    из них.
-                  </p>
-                </a>
-              </li>
-
-              <li class="trace__item">
-                <a href="#electric-train" class="trace__link js-trace-link ">
-                  <div class="title title_h4 title_indent-xs trace__title">Электропоезд «Ласточка»</div>
-
-                  <p class="desc trace__desc">
-                    От ж/д станций в Сочи, Мацесте, Хосте и Адлере до Красной Поляны (до станции Эсто-Садок) курсируют
-                    фирменные
-                    электропоезда «Ласточка». Время в пути от станции «Сочи» около 1 часа.
-                  </p>
-                </a>
-              </li>
-            </ol>
-          </div>
-
         </section>
       </div>
-    </div>
-
-    <div class="page-section">
-      <div class="container">
-        <div class="gallery">
-          <div class="gallery__header">
-            <h2 class="title title_h2 title_indent-xs title_center">Фотогалерея</h2>
-
-            <p class="desc">
-              Пятизвёздочный отель Сочи Марриотт Красная Поляна предлагает 428 элегантных и современных номеров
-              различных
-              категорий,
-              а также просторные и комфортабельные апартаменты
-            </p>
-          </div>
-
-          <!-- 
-            примерный варииант сетки из 9 фото!
-            фото должны быть размером 400х200 кроме 1 и 7
-            для 1 и 7 размер 400х400
-           -->
-          <div class="gallery__wrapper">
-            <div class="gallery__grid">
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-1">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/fff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-2">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-3">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-4">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-5">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-6">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-7">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/ffffff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-8">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
-              </div>
-
-              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-9">
-                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="9" />
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery__btn-wrapper">
-            <button class="btn btn_primary">Заселиться в отель</button>
+  
+      <div class="page-section">
+        <div class="container">
+          <div class="adv">
+            <ul class="adv__list">
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-1" />
+                </svg>
+  
+                <div class="adv__name">Обладатель международных наград</div>
+              </li>
+  
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-2" />
+                </svg>
+  
+                <div class="adv__name">Спа с крытым и открытым бассейнами</div>
+              </li>
+  
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-3" />
+                </svg>
+  
+                <div class="adv__name">Служба нянь на территории отеля</div>
+              </li>
+  
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-4" />
+                </svg>
+  
+                <div class="adv__name">Внутренний переход в казино на территории отеля</div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="page-section">
-      <div class="container">
-        <div class="any-questions">
-          <div class="any-questions__wrapper">
-            <div class="any-questions__title">Остались вопросы? Пишите — мы всегда на связи!</div>
-
-            <div class="social social_gap-sm">
-              <a href="#" class="social__link">
-                 <svg class="icon icon_size-48 icon_db">
-                  <use xlink:href="#WhatsApp"></use>
-                 </svg>
-
-                 <div class="social__name">Whats App</div>
-              </a>
-
-              <a href="#" class="social__link">
-                <svg class="icon icon_size-48 icon_db">
-                  <use xlink:href="#Viber"></use>
-                 </svg>
-
-                <div class="social__name">Viber</div>
-              </a>
-
-              <a href="#" class="social__link">
-                 <svg class="icon icon_size-48 icon_db">
-                  <use xlink:href="#Telegram"></use>
-                 </svg>
-
-                <div class="social__name">Telegram</div>
-              </a>
+  
+      <div class="page-section">
+        <div class="features">
+          <img class="features__img" src="${require('./common.blocks/features/img/features.jpg')}" alt="#">
+  
+          <div class="container">
+            <div class="features__wrapper">
+              <div class="features__content">
+                <h2 class="title title_h2 title_indent-xs">Сочи Марриотт Красная поляна</h2>
+  
+                <p class="features__desc">
+                  «Сочи Марриотт Красная Поляна» (Sochi Marriott Krasnaya Polyana) – пятизвёздочный отель премиум-класса,
+                  расположенный
+                  на Поляне 540.Инфраструктура отеля отвечает запросам на семейный отдых в горах высокого уровня.
+                  428 номеров включают
+                  делюксы повышенной комфортности, люксы и семейные апартаменты с кухней.
+                </p>
+  
+                <a href="#" class="link">Подробнее об отеле</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+  
+      <div class="page-section">
+        <div class="container">
+          <h2 class="title title_h2 title_indent-md">Номерной фонд</h2>
 
-  ${require('./common.blocks/footer/footer.html')}
-
-  ${require('./common.blocks/to-top/to-top.html')}
+          <div class="grid">
+            <div class="grid__col grid__col_1">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-1.jpg')}" alt="#">
+              </a>
   
-  ${require('./common.blocks/popup/popup.html')}
-
-  <div class="popup js-gallery-popup" id="gallery-1">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Номер Люкс</span>
+              </div>
+            </div>
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+            <div class="grid__col grid__col_2">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-2.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Номер Делюкс</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_3">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-3.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный однокомнатный полулюкс</span>
+              </div>
+            </div>
+  
+  
+            <div class="grid__col grid__col_4">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-4.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_5">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-5.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Пентхаус</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_6">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-6.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный люкс «Гранд» с тремя спальнями</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- модификатор для второй сетки из 5 элементов
+             если 5 элемент текст, модификатор grid__col_desc
+             если фото, модификатор grid__col_img
+          -->
+          <div class="grid grid_has_five_elements">
+            <div class="grid__col grid__col_1">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-1.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Номер Люкс</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_2">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-2.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Номер Делюкс</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_3">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-3.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный однокомнатный полулюкс</span>
+              </div>
+            </div>
+  
+            <div class="grid__col grid__col_4">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-4.jpg')}" alt="#">
+              </a>
+  
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
+              </div>
+            </div>
+  
+            <!-- <div class="grid__col grid__col_5 grid__col_img">
+              <a href="#" class="grid__item" style="background: linear-gradient(180deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 61.08%)">
+                <img class="grid__img" src="${require('./common.blocks/grid/img/room-2.jpg')}" alt="#">
+              </a>
+            
+              <div class="grid__text-wrapper">
+                <span class="grid__title">Семейный однокомнатный улучшенный люкс</span>
+              </div>
+            </div> -->
+  
+            <div class="grid__col grid__col_5 grid__col_desc">
+              <p class="desc">
+                Номерной фонд «Сочи Марриотт Красная Поляна» самый большой среди отелей Курорта Красная Поляна.
+                428 номеров представлены
+                категориями «делюкс» (333 номера), «люкс» (44 номера), «семейный люкс» (47 номеров), «пентхаус» (3 номера)
+                и «президентский люкс» (1 номер), в том числе номерами для гостей с ограниченными возможностями
+                по здоровью.
+              </p>
+  
+              <p class="desc">
+                Эклектика интерьеров включает элементы минимализма и стиля баухаус. Природные бежевые и коричневые оттенки
+                формируют
+                ненавязчивое пространство для комфорта и отдыха в окружении горных вершин. Оснащение номеров полностью
+                соответствует
+                пятизвёздочным стандартам международного бренда Marriott, включая премиальное постельное бельё,
+                изготовленное на заказ.
+                Визитная карточка каждого номера отеля — балконы с панорамными видами на Кавказские горы.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
   
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
-    </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-2">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк</h3>
+      <div class="page-section">
+        <section class="benefits">
+          <div class="container">
+            <h2 class="title title_h2 title_center title_indent-md">Уникальный отель в горах на Красной Поляне</h2>
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+            <div class="benefits__wrapper">
+              <div class="benefits__element benefits__element_reverse">
+                <div class="benefits__gallery">
+                  <div class="swiper js-swiper">
+                    <div class="swiper-container js-benefits-swiper">
+                      <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                      </div>
+  
+                      <div class="benefits__pagination js-benefits-pagination"></div>
+  
+                      <div class="benefits__button-prev js-benefits-prev"></div>
+                      <div class="benefits__button-next js-benefits-next"></div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="benefits__info">
+                  <h3 class="title title_indent-xs title_h3">Спа комплекс Soul SPA</h3>
+  
+                  <p class="desc">
+                    Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                    крытый бассейн
+                    с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                    красоты и зону
+                    релаксации
+                  </p>
+  
+                  <p class="desc">
+                    Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                    восстановлению
+                    жизненного баланса
+                  </p>
+  
+                  <a class="link" href="#">Узнать больше</a>
+                </div>
+              </div>
+  
+              <div class="benefits__element">
+                <div class="benefits__gallery">
+                  <div class="swiper js-swiper">
+                    <div class="swiper-container js-benefits-swiper">
+                      <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-2.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-3.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                      </div>
+  
+                      <div class="benefits__pagination js-benefits-pagination"></div>
+  
+                      <div class="benefits__button-prev js-benefits-prev"></div>
+                      <div class="benefits__button-next js-benefits-next"></div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="benefits__info">
+                  <h3 class="title title_indent-xs title_h3">Сезонные предложения в лобби баре отеля</h3>
+  
+                  <p class="desc">
+                    Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                    крытый бассейн
+                    с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                    красоты и зону
+                    релаксации
+                  </p>
+  
+                  <p class="desc">
+                    Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                    восстановлению
+                    жизненного баланса
+                  </p>
+  
+                  <p class="desc">
+                    Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                    крытый бассейн
+                    с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                    красоты и зону
+                    релаксации
+                  </p>
+  
+                  <p class="desc">
+                    Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                    восстановлению
+                    жизненного баланса
+                  </p>
+  
+                  <a class="link" href="#">Узнать больше</a>
+                </div>
+              </div>
+  
+              <div class="benefits__element benefits__element_reverse">
+                <div class="benefits__gallery">
+                  <div class="swiper js-swiper">
+                    <div class="swiper-container js-benefits-swiper">
+                      <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                          <span class="benefits__img-wrapper">
+                            <img class="benefits__img" src="${require('./common.blocks/benefits/img/slide-1.jpg')}"
+                              alt="#">
+                          </span>
+                        </div>
+                      </div>
+  
+                      <div class="benefits__pagination js-benefits-pagination"></div>
+  
+                      <div class="benefits__button-prev js-benefits-prev"></div>
+                      <div class="benefits__button-next js-benefits-next"></div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="benefits__info">
+                  <h3 class="title title_indent-xs title_h3">Ресторан The River</h3>
+  
+                  <p class="desc">
+                    Роскошный
+                  </p>
+  
+                  <a class="link" href="#">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="benefits__btn-wrapper">
+              <button class="btn btn_primary js-get-booking-popup" data-target="#booking">Заселиться в отель</button>
+            </div>
+          </div>
+        </section>
       </div>
   
-      <p class="desc">
-        Байк-парк
-      </p>
-    </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-3">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк Байк парк Байк парк</h3>
+      <div class="page-section">
+        <div class="container">
+          <section class="trace">
+            <h2 class="title title_h2 title_indent-md">Как добраться до отеля</h2>
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+            <div class="trace__wrapper">
+              <div class="trace__frame is-active js-trace-frame" id="transfer">
+                <img class="trace__img" src="${require('./common.blocks/trace/img/trace-1.jpg')}" alt="#">
+              </div>
+  
+              <div class="trace__frame js-trace-frame" id="public-transport">
+                <img class="trace__img" src="${require('./common.blocks/trace/img/trace-2.jpg')}" alt="#">
+              </div>
+  
+              <div class="trace__frame js-trace-frame" id="electric-train">
+                <img class="trace__img" src="${require('./common.blocks/trace/img/trace-3.jpg')}" alt="#">
+              </div>
+  
+              <ol class="trace__list">
+                <li class="trace__item is-active">
+                  <a href="#transfer" class="trace__link js-trace-link">
+                    <div class="title title_h4 title_indent-xs trace__title">Трансфер</div>
+  
+                    <p class="desc trace__desc">
+                      Отель Сочи Марриотт предоставляет трансфер Аэропорт-Отель-Аэропорт. Заказать трансфер необходимо
+                      не менее,
+                      чем за 24 часа до заезда/выезда.Можно также оплатить индивидуальный трансфер (три вида автомобилей —
+                      до 3,
+                      до 6 и до 17 человек) по 100% предоплате. Детям предоставляется детское кресло.
+                    </p>
+                  </a>
+                </li>
+  
+                <li class="trace__item">
+                  <a href="#public-transport" class="trace__link js-trace-link">
+                    <div class="title title_h4 title_indent-xs trace__title">Общественный транспорт</div>
+  
+                    <p class="desc trace__desc">
+                      По «старой трассе» от Аэропорта и из центра Сочи до отеля идут автобусы 105 и 105с. Ближайшие
+                      к отелю станции
+                      электрички — Роза хутор и Эсто-Садок, но от них также придётся ехать на 105 автобусе. Пешком —
+                      около получаса от любой
+                      из них.
+                    </p>
+                  </a>
+                </li>
+  
+                <li class="trace__item">
+                  <a href="#electric-train" class="trace__link js-trace-link ">
+                    <div class="title title_h4 title_indent-xs trace__title">Электропоезд «Ласточка»</div>
+  
+                    <p class="desc trace__desc">
+                      От ж/д станций в Сочи, Мацесте, Хосте и Адлере до Красной Поляны (до станции Эсто-Садок) курсируют
+                      фирменные
+                      электропоезда «Ласточка». Время в пути от станции «Сочи» около 1 часа.
+                    </p>
+                  </a>
+                </li>
+              </ol>
+            </div>
+  
+          </section>
+        </div>
       </div>
   
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
-    </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-4">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+      <div class="page-section">
+        <div class="container">
+          <div class="gallery">
+            <div class="gallery__header">
+              <h2 class="title title_h2 title_indent-xs title_center">Фотогалерея</h2>
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+              <p class="desc">
+                Пятизвёздочный отель Сочи Марриотт Красная Поляна предлагает 428 элегантных и современных номеров
+                различных
+                категорий,
+                а также просторные и комфортабельные апартаменты
+              </p>
+            </div>
+  
+            <!-- 
+              примерный варииант сетки из 9 фото!
+              фото должны быть размером 400х200 кроме 1 и 7
+              для 1 и 7 размер 400х400
+             -->
+            <div class="gallery__wrapper">
+              <div class="gallery__grid">
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-1">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/fff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-2">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-3">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-4">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-5">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-6">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-7">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/ffffff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-8">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+                </div>
+  
+                <div class="gallery__grid-item js-gallery-item" data-target="#gallery-9">
+                  <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="9" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="gallery__btn-wrapper">
+              <button class="btn btn_primary js-get-booking-popup" data-target="#booking">Заселиться в отель</button>
+            </div>
+          </div>
+        </div>
       </div>
   
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
-    </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-5">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+      <div class="page-section">
+        <div class="container">
+          <div class="any-questions">
+            <div class="any-questions__wrapper">
+              <div class="any-questions__title">Остались вопросы? Пишите — мы всегда на связи!</div>
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+              <div class="social social_gap-sm">
+                <a href="#" class="social__link">
+                   <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#WhatsApp"></use>
+                   </svg>
+  
+                   <div class="social__name">Whats App</div>
+                </a>
+  
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Viber"></use>
+                   </svg>
+  
+                  <div class="social__name">Viber</div>
+                </a>
+  
+                <a href="#" class="social__link">
+                   <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Telegram"></use>
+                   </svg>
+  
+                  <div class="social__name">Telegram</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </main>
   
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
-    </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-6">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    ${require('./common.blocks/footer/footer.html')}
   
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+    ${require('./common.blocks/to-top/to-top.html')}
+    
+    ${require('./common.blocks/popup/popup.html')}
+  
+    <div class="popup js-gallery-popup" id="gallery-1">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
       </div>
-  
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
     </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-7">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
-  
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+    <div class="popup js-gallery-popup" id="gallery-2">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк
+        </p>
       </div>
-  
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
     </div>
-  </div>
-  <div class="popup js-gallery-popup" id="gallery-8">
-    <div class="popup__wrapper js-popup-wrapper">
-      <div class="popup__header">
-        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
-  
-        <button class="popup__close js-close-popup">
-          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
+    <div class="popup js-gallery-popup" id="gallery-3">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк Байк парк Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
       </div>
-  
-      <p class="desc">
-        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
-        метров над уровнем
-        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
-      </p>
+    </div>
+    <div class="popup js-gallery-popup" id="gallery-4">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+      </div>
+    </div>
+    <div class="popup js-gallery-popup" id="gallery-5">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+      </div>
+    </div>
+    <div class="popup js-gallery-popup" id="gallery-6">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+      </div>
+    </div>
+    <div class="popup js-gallery-popup" id="gallery-7">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+      </div>
+    </div>
+    <div class="popup js-gallery-popup" id="gallery-8">
+      <div class="popup__wrapper js-popup-wrapper">
+        <div class="popup__header">
+          <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+    
+          <button class="popup__close js-close-popup">
+            <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+    
+        <p class="desc">
+          Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+          метров над уровнем
+          моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+        </p>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

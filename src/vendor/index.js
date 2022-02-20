@@ -60,5 +60,8 @@ require("expose-loader?Swiper!swiper/dist/js/swiper.js");
 // require("lightbox2");
 // require("lightbox2/dist/css/lightbox.css");
 
+//babel-polyfill
+require('babel-polyfill');
+
 // normalize.css
 require('normalize.css/normalize.css');

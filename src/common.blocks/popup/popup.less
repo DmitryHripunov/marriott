@@ -9,7 +9,8 @@
   bottom: 0;
   overflow-y: auto;
   padding: 16px 0;
-  background: rgba(0, 0, 0, 0.6);
+  // background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.702);
   display: none;
 
   &.is-active {
@@ -29,6 +30,10 @@
     @shadow-lg();
     border-radius: 20px;
     background-color: @white;
+
+    &_dark {
+      background-color:  @dark;
+    }
   }
 
   &__header {

@@ -4,6 +4,16 @@
 	position: relative;
   height: 900px;
   width: 100%;
+
+	&__banner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
   
 	&__container {
 		padding-top: 212px;
@@ -35,13 +45,8 @@
 		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(20px);
 		border-radius: 8px;
-
+		padding: 16px;
 		width: 100%;
-		height: 268px;
-	}
-
-	&__awards {
-		
 	}
 }
 
@@ -65,8 +70,6 @@
 
 		&__form {
 			margin-bottom: 32px;
-
-			height: 124px;
 		}
 	}
 }
