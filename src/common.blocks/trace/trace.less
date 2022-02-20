@@ -13,9 +13,8 @@
   &__img {
     display: block;
     object-fit: cover;
-    height: calc(670 / 1024 * 100vw);
     min-height: 240px;
-    max-height: 572px;
+    max-height: 400px;
     width: 100%;
   }
 
@@ -56,18 +55,23 @@
   }
 }
 
-@media (min-width: @laptop) {
+@media (min-width: @tablet) {
   .trace {
     &__wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: 41% 1fr;
       grid-gap: 0 32px;
     }
 
     &__frame {
-      flex: 1 1 auto;
       width: 100%;
-      max-width: 480px;
+      max-width: 490px;
       margin-bottom: 0;
+    }
+
+    &__img {
+      max-height: 590px;
+      width: 100%;
     }
 
     &__list {

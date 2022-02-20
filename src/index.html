@@ -480,7 +480,229 @@ ${require('./common.blocks/head/head.html')}
         </section>
       </div>
     </div>
+
+    <div class="page-section">
+      <div class="container">
+        <div class="gallery">
+          <div class="gallery__header">
+            <h2 class="title title_h2 title_indent-xs title_center">Фотогалерея</h2>
+
+            <p class="desc">
+              Пятизвёздочный отель Сочи Марриотт Красная Поляна предлагает 428 элегантных и современных номеров
+              различных
+              категорий,
+              а также просторные и комфортабельные апартаменты
+            </p>
+          </div>
+
+          <!-- 
+            примерный варииант сетки из 9 фото!
+            фото должны быть размером 400х200 кроме 1 и 7
+            для 1 и 7 размер 400х400
+           -->
+          <div class="gallery__wrapper">
+            <div class="gallery__grid">
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-1">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/fff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-2">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-3">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/fff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-4">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-5">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-6">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-7">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x400/3792DB/ffffff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-8">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="#" />
+              </div>
+
+              <div class="gallery__grid-item js-gallery-item" data-target="#gallery-9">
+                <img class="gallery__grid-img" src="https://dummyimage.com/400x200/3792DB/ffffff" alt="9" />
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__btn-wrapper">
+            <button class="btn btn_primary">Заселиться в отель</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <div class="popup js-gallery-popup" id="gallery-1">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-2">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-3">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк Байк парк Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-4">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-5">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-6">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-7">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
+  <div class="popup js-gallery-popup" id="gallery-8">
+    <div class="popup__wrapper js-popup-wrapper">
+      <div class="popup__header">
+        <h3 class="title title_h3 title_indent-xs">Байк парк</h3>
+  
+        <button class="popup__close js-close-popup">
+          <svg class="icon icon_color-dark icon_ml-8 icon_size-24 icon_db">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+  
+      <p class="desc">
+        Байк-парк Красная Поляна — это комплекс трасс для катания на горных велосипедах с высоты около 1000
+        метров над уровнем
+        моря. Это единственный в России байк-парк с полноценной инфраструктурой.
+      </p>
+    </div>
+  </div>
 
 </body>
 
