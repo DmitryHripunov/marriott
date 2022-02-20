@@ -1,0 +1,26 @@
+@import (reference) "../../less/variables.less";
+
+.any-questions {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .any-questions {
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 48px;
+    }
+  }
+}

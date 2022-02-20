@@ -1,0 +1,54 @@
+@import (reference) "../../less/variables.less";
+
+.social {
+  display: flex;
+
+  &_gap-sm {
+    grid-gap: 0 24px;
+  }
+
+  &_gap-sx {
+    grid-gap: 0 16px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon {
+      transition: opacity @transition;
+    }
+
+    .social__name {
+      transition: color @transition;
+    }
+
+    &:hover {
+      .icon {
+        opacity: 0.6;
+      }
+
+      .social__name {
+        color: @primary;
+      }
+    }
+  }
+
+  &__name {
+    margin-top: 8px;
+    color: @gray;
+  }
+}
+
+@media (min-width: @laptop) {
+  .social {
+    &_gap-sm {
+      grid-gap: 0 32px;
+    }
+
+    &__name {
+      margin-top: 12px;
+    }
+  }
+}
