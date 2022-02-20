@@ -33,7 +33,7 @@
 			background: @gray-5;
 		}
 
-		&:focus {
+		&:active {
 			color: @primary;
 		}
 
@@ -105,14 +105,14 @@
 				right: 11px;
 				top: 12px;
 			}
-		}
+			
+			&:hover {
+				color: @dark !important;
+			}
 
-		&__item:hover {
-			color: @dark;
-		}
-
-		&__item:active {
-			color: @primary-dark; 
+			&:active {
+				color: @primary !important;
+			}
 		}
 
 		&__dropdown-wrapper {

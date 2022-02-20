@@ -1,0 +1,158 @@
+@import (reference) "../../less/variables.less";
+
+.footer {
+  &__map {
+    width: 100%;
+    height: auto;
+    @shadow-lg();
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    padding-top: 186px;
+    padding-bottom: 56px;
+    margin-top: -130px;
+    background-color: @dark;
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: @gray;
+  }
+
+  &__pay-cards {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-top: 16px;
+  }
+
+  &__info {
+    margin-bottom: 32px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 0 16px;
+  }
+
+  &__nav,
+  &__address {
+    flex: 0 1 50%;
+  }
+
+  &__actions-name {
+    color: @white;
+    font-weight: 800;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 22px;
+    color: @secondary-light;
+  }
+
+  &__actions-item {
+    display: block;
+    max-width: max-content;
+    font-size: 12px;
+    color: @secondary-light;
+    @hover-link();
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 32px;
+  }
+
+  &__bottom-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-gap: 8px 8px;
+    margin-bottom: 16px;
+  }
+
+  &__bottom-link {
+    display: inline-block;
+    font-size: 12px;
+    color: @gray;
+    @hover-link();
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: @gray;
+  }
+}
+
+@media (min-width: @laptop) {
+  .footer {
+    &__wrapper {
+      padding-top: 280px;
+      margin-top: -200px;
+      padding-bottom: 40px;
+    }
+
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      grid-gap: 0 16px;
+    }
+
+    &__info,
+    &__actions {
+      flex: 1 1 490px;
+      max-width: 490px;
+    }
+
+    &__info {
+      margin-bottom: 0;
+    }
+
+    &__actions-name {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &__actions-item {
+      font-size: 14px;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      grid-gap: 0 16px;
+      margin-top: 60px;
+    }
+
+    &__bottom-nav {
+      margin-bottom: 0;
+      margin-left: auto;
+      grid-gap: 0 16px;
+    }
+    
+    &__bottom-link {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        right: -8px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: @gray;
+      }
+    }
+
+    &__copy {
+      white-space: nowrap;
+    }
+  }
+}
