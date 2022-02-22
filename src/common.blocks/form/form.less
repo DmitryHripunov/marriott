@@ -1,0 +1,40 @@
+@import (reference) "../../less/variables.less";
+
+.form {
+  &__group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 8px;
+  }
+
+  &__item {
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: none;
+    
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: @gray-medium;
+    }
+
+    &_booking {
+      border-radius: 4px 0px 0px 4px;
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .form {
+    &__input {
+      padding: 16px;
+    }
+  }
+}

@@ -46,7 +46,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        // target: 'http://organic-zone.demo.onlinebees.ru',
+        // target: 'http://',
         // logLevel: 'debug',
         // changeOrigin: true,
       },

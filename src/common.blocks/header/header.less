@@ -70,7 +70,6 @@
 		display: inline-block;
 		line-height: 1;
     @font-size-link();
-    @hover-link();
 	}
 
   &__tel-text {
@@ -131,12 +130,15 @@
       font-weight: 800;
       font-size: 14px;
       white-space: nowrap;
+      transition: color @transition;
     }
     
     &__tel-text {
-       @hover-link();
-       color: @dark;
-     }
+      color: @dark;
+      &:hover {
+        color: @primary-dark;
+      }
+    }
 
     &__location {
       display: inline-flex;
