@@ -9,6 +9,9 @@
   }
 
   &__item {
+    &_main {
+      flex: 1;
+    }
   }
 
   &__input {
@@ -25,7 +28,7 @@
       color: @gray-medium;
     }
 
-    &_booking {
+    &_radius-left {
       border-radius: 4px 0px 0px 4px;
     }
   }
@@ -33,6 +36,17 @@
 
 @media (min-width: @laptop) {
   .form {
+    &__group {
+      &_main {
+        grid-gap: 1px;
+      }
+    }
+
+    &__item {
+      &_main {
+      }
+    }
+
     &__input {
       padding: 16px;
     }
