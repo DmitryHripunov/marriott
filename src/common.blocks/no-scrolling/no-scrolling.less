@@ -3,14 +3,25 @@
 .no-scrolling {
 	overflow: hidden;
 
+	
+	&_vue {
 		&::after {
-		// position: fixed;
-		// content: "";
-		// top: 0;
-		// left: 0;
-		// right: 0;
-		// bottom: 0;
-		// z-index: 10;
-		// background: rgba(0, 0, 0, .6);
+			position: fixed;
+			content: "";
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			background: rgba(255, 255, 255, 0.7);
+		}
+		.header {
+			opacity: .3;
+			background: rgba(255, 255, 255, 0.7);
+			pointer-events: none;
+		}
+		.to-top {
+			display: none;
+		}
 	}
 }
