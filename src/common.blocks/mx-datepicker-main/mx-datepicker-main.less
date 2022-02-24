@@ -1,0 +1,52 @@
+@import (reference) "../../less/variables.less";
+
+.mx-datepicker-main {
+  font: 14px/1.4 "inter Neue", "Microsoft", sans-serif;
+  color: @dark;
+  border-radius: 8px;
+  @shadow-lg();
+}
+
+.mx-datepicker-range {
+  width: 100%;
+}
+
+.mx-datepicker-popup {
+  z-index: 10;
+
+  &_popup {
+    z-index: 12;
+  }
+}
+
+.mx-calendar-header-label .mx-btn {
+  font-weight: 800;
+  color: @dark;
+}
+
+.mx-btn {
+  color: @primary;
+}
+
+.mx-calendar-content .cell:not(.disabled) {
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: inherit;
+  transition: border-color @transition;
+}
+
+.mx-calendar-content .cell:hover:not(.disabled):not(.active) {
+  background-color: transparent;
+  border-color: @primary;
+}
+
+.mx-calendar-content .cell.active {
+  background-color: @primary;
+  color: @white;
+}
+
+.mx-calendar-content .cell.in-range,
+.mx-calendar-content .cell.hover-in-range {
+  background-color: @primary-light;
+}

@@ -2,8 +2,9 @@
 
 .counter {
   display: flex;
-  grid-gap: 0 24px;
+  grid-gap: 8px 24px;
   max-width: 100%;
+  flex-wrap: wrap;
 
   &__footnote {
     color: @gray;
@@ -13,8 +14,8 @@
     width: 40px;
     border: none;
     text-align: center;
+    padding-left: 8px;
     font-size: 14px;
-    font-family: 'Inter' sans-serif;
 
     &:focus {
       outline: none;
@@ -23,7 +24,7 @@
 
   &__wrapper {
     display: flex;
-    grid-gap: 0 16px;
+    grid-gap: 0 8px;
   }
 
   &__btn {

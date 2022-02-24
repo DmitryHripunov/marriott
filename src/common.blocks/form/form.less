@@ -1,16 +1,18 @@
 @import (reference) "../../less/variables.less";
 
 .form {
-  // max-width: 340px;
-  // width: 100%;
-  // margin: 0 auto;
   &__group {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 8px;
+    grid-gap: 16px;
     flex-direction: column;
+    
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
 
     &_main {
+      grid-gap: 8px;
       &:not(:last-child) {
         margin-bottom: 8px;
       }
@@ -23,8 +25,12 @@
 
     &_main {
       flex: 1;
-      // max-width: 240px;
       width: 100%;
+    }
+
+    &_centered {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -60,12 +66,13 @@
     border-radius: 4px;
     background-color: @white;
     overflow-y: auto;
-    max-height: 50vh;
+    max-height: 0;
     @shadow-lg();
-    transition: opacity @transition;
+    transition: max-height @transition;
 
     &.is-active {
       z-index: 11;
+      max-height: 50vh;
       opacity: 1;
       pointer-events: unset;
     }
@@ -75,6 +82,10 @@
     display: flex;
     padding: 8px 16px;
     justify-content: center;
+
+    &_popup {
+      justify-content: space-between;
+    }
   }
 
   &__dropdown-item {
@@ -154,6 +165,10 @@
       @shadow-sm();
       transition: background-color @transition;
     }
+
+    &_white {
+      color:@white;
+    }
   }
 
   &__link {
@@ -175,6 +190,14 @@
     &__dropdown {
       width: auto;
       right: calc(-100% + 150px);
+
+      &_popup {
+        right: 0;
+      }
+
+      &_counter {
+        width: max-content;
+      }
     }
 
     &__item {

@@ -145,7 +145,7 @@
           <input type="hidden" v-model="children" />
         </div>
 
-        <div class="form__item form__item_main" v-show="step_1">
+        <div class="form__item form__item_main form__item_centered" v-show="step_1">
           <button
             class="btn btn_primary"
             :disabled="!time[0] || !roomType"
@@ -181,8 +181,8 @@
           />
         </div>
 
-        <div class="form__item form__item_main">
-          <button type="button" class="btn btn_primary js-get-booking-popup" data-target="#booking">Забронировать</button>
+        <div class="form__item form__item_main form__item_centered">
+          <button type="button" class="btn btn_primary js-get-booking-popup" data-target="#popup-thanks">Забронировать</button>
         </div>
       </div>
     </div>
@@ -196,30 +196,6 @@
         <a href="#" target="_blank" class="form__link">персональны данных</a>
       </label>
     </div>
-
-    <!-- <div class="popup" :class="{'is-active': showPopup}" @click="prevent">
-      <div class="popup__wrapper popup__wrapper_dark">
-        <div class="popup__header">
-          <h3 class="title title_h3 title_indent-xs title_white title_center">
-            Заявка отпарвлена
-          </h3>
-
-          <button type="button" class="popup__close" @click.prevent="makePopupThanksHidden">
-            <svg class="icon icon_color-white icon_ml-8 icon_size-24 icon_db">
-              <use xlink:href="#close"></use>
-            </svg>
-          </button>
-        </div>
-
-        <p class="desc desc_light desc_center desc_indent-16">
-          Ваша заявка принята, специалист свяжется с вами в рабочее время: пн-пт с 9:30 до 17:30
-        </p>
-
-        <div type="button" class="popup__btn-wrapper" @click.prevent="makePopupThanksHidden">
-          <button class="btn btn_primary">Хорошо</button>
-        </div>
-      </div>
-    </div> -->
   </form>
 </template>
 
@@ -343,19 +319,6 @@ export default {
     decrementChildren() {
       this.countChildren -= 1;
     },
-    // makePopupThanks(event) {
-    //   event._isClickWithinDropDown = true;
-    //   this.showPopup = true;
-    //   document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
-    //   document.querySelector('.js-header').style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
-    //   document.body.classList.add('no-scrolling', 'no-scrolling_vue');
-    // },
-    // makePopupThanksHidden() {
-    //   this.showPopup = false;
-    //   document.body.style.paddingRight =  "";
-    //   document.querySelector('.js-header').style.paddingRight = "";
-    //   document.body.classList.remove('no-scrolling', 'no-scrolling_vue');
-    // },
   },
   watch: {
     time: {
@@ -369,58 +332,8 @@ export default {
     document.addEventListener("click", (event) => {
       if (event._isClickWithinDropDown) return;
       this.doHiddenDropdown();
-      // this.makePopupThanksHidden()
     });
   },
 };
 </script>
 
-<style>
-.mx-datepicker-main {
-  font: 14px/1.4 "inter Neue", "Microsoft", sans-serif;
-  color: #23323f;
-  border-radius: 8px;
-  box-shadow: 0px 12px 16px -4px rgba(17, 24, 39, 0.1),
-    0px 4px 6px -2px rgba(17, 24, 39, 0.05);
-}
-
-.mx-datepicker-range {
-  width: 100%;
-}
-
-.mx-datepicker-popup {
-  z-index: 9;
-}
-
-.mx-calendar-header-label .mx-btn {
-  font-weight: 800;
-  color: #23323f;
-}
-
-.mx-btn {
-  color: #f55347;
-}
-
-.mx-calendar-content .cell:not(.disabled) {
-  font-weight: 600;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: inherit;
-  transition: border-color 0.2s ease-in-out;
-}
-
-.mx-calendar-content .cell:hover:not(.disabled):not(.active) {
-  background-color: transparent;
-  border-color: #f55347;
-}
-
-.mx-calendar-content .cell.active {
-  background-color: #f55347;
-  color: #fff;
-}
-
-.mx-calendar-content .cell.in-range,
-.mx-calendar-content .cell.hover-in-range {
-  background-color: #feeae8;
-}
-</style>
