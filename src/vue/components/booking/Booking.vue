@@ -3,14 +3,20 @@
     <div class="form__wrapper">
       <div class="form__group form__group_main">
         <div class="form__item form__item_main">
-          <DatePicker
+          <date-picker
             v-model="time"
             :range="range"
             valueType="format"
             placeholder="Заезд – Отъезд"
             :disabled-date="disabledDate"
             input-class="form__input form__input_radius-left"
-          />
+          >
+            <template v-slot:icon-calendar>
+              <svg class="icon icon_size-24">
+                <use xlink:href="#calendar"></use>
+              </svg>
+            </template>
+          </date-picker>
         </div>
 
         <div class="form__item form__item_main">
@@ -60,85 +66,10 @@
             :class="{ 'is-active': isActiveDropdownNumberPeople }"
             @click="prevent($event)"
           >
-            <div class="form__counter">
-              <div class="counter">
-                <div class="counter__desc">
-                  <strong>Взрослые</strong>
-                  <div class="counter__footnote">Старше 12 лет</div>
-                </div>
-
-                <div class="counter__wrapper">
-                  <button
-                    type="button"
-                    class="counter__btn"
-                    @click.prevent="decrementAdults"
-                    :disabled="adults <= 1 || adults === 1"
-                  >
-                    <svg class="icon icon_size-40 icon_color-primary">
-                      <use xlink:href="#minus"></use>
-                    </svg>
-                  </button>
-
-                  <input
-                    class="counter__input"
-                    type="number"
-                    name="count"
-                    v-model.number="countAdults"
-                  />
-
-                  <button
-                    type="button"
-                    class="counter__btn"
-                    @click.prevent="incrementAdults"
-                    :disabled="adults >= 100"
-                  >
-                    <svg class="icon icon_size-40 icon_color-primary">
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="form__counter">
-              <div class="counter">
-                <div class="counter__desc">
-                  <strong>Дети</strong>
-                  <div class="counter__footnote">От 2 до 12 лет</div>
-                </div>
-
-                <div class="counter__wrapper">
-                  <button
-                    type="button"
-                    class="counter__btn"
-                    @click.prevent="decrementChildren"
-                    :disabled="children <= 0 || children === 0"
-                  >
-                    <svg class="icon icon_size-40 icon_color-primary">
-                      <use xlink:href="#minus"></use>
-                    </svg>
-                  </button>
-
-                  <input
-                    class="counter__input"
-                    type="number"
-                    name="count"
-                    v-model.number="countChildren"
-                  />
-
-                  <button
-                    type="button"
-                    class="counter__btn"
-                    @click.prevent="incrementChildren"
-                    :disabled="children >= 100"
-                  >
-                    <svg class="icon icon_size-40 icon_color-primary">
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+            <Counter
+              :adults.sync="adults"
+              :children.sync="children"
+            />
           </div>
 
           <input type="hidden" v-model="adults" />
@@ -203,9 +134,10 @@
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 import "vue2-datepicker/locale/ru";
+import Counter from "../counter/Counter.vue";
 
 export default {
-  components: { DatePicker },
+  components: { DatePicker, Counter },
   data() {
     return {
       range: true,
@@ -254,22 +186,6 @@ export default {
         this.roomType = value;
       },
     },
-    countAdults: {
-      get() {
-        return this.adults;
-      },
-      set(value) {
-        this.adults = value;
-      },
-    },
-    countChildren: {
-      get() {
-        return this.children;
-      },
-      set(value) {
-        this.children = value;
-      },
-    },
   },
   methods: {
     timeControl() {
@@ -306,18 +222,6 @@ export default {
     disabledDate(date) {
       const currentDate = date;
       return currentDate < new Date().getTime() - 1 * 24 * 60 * 60 * 1000;
-    },
-    incrementAdults() {
-      this.countAdults += 1;
-    },
-    decrementAdults() {
-      this.countAdults -= 1;
-    },
-    incrementChildren() {
-      this.countChildren += 1;
-    },
-    decrementChildren() {
-      this.countChildren -= 1;
     },
   },
   watch: {
