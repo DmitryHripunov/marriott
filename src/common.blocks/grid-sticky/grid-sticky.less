@@ -1,0 +1,33 @@
+@import (reference) "../../less/variables.less";
+
+.grid-sticky {
+  &__aside {
+    padding: 24px;
+    background: @secondary-light;
+    @shadow-lg();
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    grid-gap: 16px 0;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-weight: 600;
+    @hover-link();
+    font-size: 12px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .grid-sticky {
+    &__aside {
+      padding: 32px;
+      margin-bottom: 0;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
