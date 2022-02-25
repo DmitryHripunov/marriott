@@ -7,6 +7,5 @@ window.Vue = Vue;
 new Vue({
   components: {
     Booking,
-    BookingPopup: () => import('./components/bookingPopup/BookingPopup.vue'),
   },
 }).$mount('#app');

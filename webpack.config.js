@@ -241,10 +241,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       minify: {
+        removeRedundantAttributes: false,
         removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
       },
-      // chunksSortMode: 'manual',
-      // chunks: ['vendor', 'common'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/agreement.html',
+      filename: 'agreement.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
     }),
   ],
 };
