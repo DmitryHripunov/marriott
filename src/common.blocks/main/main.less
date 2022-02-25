@@ -1,0 +1,17 @@
+@import (reference) '../../less/variables.less';
+
+.main {
+  min-height: calc(100vh - 600px);
+
+  &_indent-top {
+    padding-top: 58px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .main {
+    &_indent-top {
+      padding-top: 86px;
+    }
+  }
+}

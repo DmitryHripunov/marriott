@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent-top">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+      
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">
+                Пользовательское соглашение
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/to-top/to-top.html')}
+    ${require('./common.blocks/popup/popup.html')}
+    ${require('./common.blocks/popup-thanks/popup-thanks.html')}
+  </div>
+</body>
+
+</html>

@@ -132,7 +132,7 @@
 
         <span class="form__checkbox-text" :class="form__checkbox_text_white">Cогласен с условиями </span>
 
-        <a href="#" target="_blank" class="form__link">персональны данных</a>
+        <a href="agreement.html" class="form__link">персональны данных</a>
       </label>
     </div>
   </form>

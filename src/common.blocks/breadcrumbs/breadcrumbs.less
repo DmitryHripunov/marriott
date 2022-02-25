@@ -1,0 +1,51 @@
+@import (reference) "../../less/variables.less";
+
+.breadcrumbs {
+  padding: 16px 0 24px 0;
+
+  &__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+  &__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 32px;
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 6px;
+				right: -16px;
+				width: 6px;
+				height: 12px;
+				background: url("img/arrow-right.svg") center / cover no-repeat;
+			}
+		}
+	}
+
+  &__link {
+		color: @gray;
+		font-size: 12px;
+		line-height: 16px;
+		@hover-link();
+
+		&.is-active {
+			color: @dark;
+			cursor: default;
+
+      &:hover {
+        color: @dark;
+      }
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+  .breadcrumbs {
+    padding: 32px 0;
+  }
+}
