@@ -22,6 +22,7 @@
   &__item {
     cursor: pointer;
     position: relative;
+    max-width: 100%;
 
     &_main {
       flex: 1;
@@ -42,6 +43,7 @@
     border-radius: 4px;
     border: none;
     background-color: @white;
+    overflow: hidden;
 
     &:focus {
       outline: none;
@@ -110,11 +112,21 @@
   }
 
   &__tag {
+    position: relative;
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 210px;
+    max-width: 98%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 15px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .5);
+    }
   }
 
   &__checkbox-wrapper {
@@ -208,7 +220,7 @@
       &_main {
         max-width: 100%;
 
-        &:last-child {
+        &:last-child:not(.form__item_centered) {
           text-align: end;
         }
       }
@@ -222,6 +234,9 @@
       }
 
       &_radius-left {
+        .form__input {
+          border-radius: 4px 0px 0px 4px;
+        }
         border-radius: 4px 0px 0px 4px;
       }
 

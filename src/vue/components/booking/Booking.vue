@@ -1,15 +1,16 @@
 <template>
   <form class="form">
     <div class="form__wrapper">
-      <div class="form__group form__group_main">
-        <div class="form__item form__item_main">
+      <div class="form__group " :class="form__group_main">
+        <div class="form__item" :class="form__item_main">
           <date-picker
+            :popupClass="popup_class"
             v-model="time"
             :range="range"
             valueType="format"
             placeholder="Заезд – Отъезд"
             :disabled-date="disabledDate"
-            input-class="form__input form__input_radius-left"
+            input-class="form__input" :class="form__input_radius_left"
           >
             <template v-slot:icon-calendar>
               <svg class="icon icon_size-24">
@@ -19,9 +20,9 @@
           </date-picker>
         </div>
 
-        <div class="form__item form__item_main">
+        <div class="form__item" :class="form__item_main">
           <div
-            class="form__input form__input_sharp"
+            class="form__input" :class="form__input_sharp"
             @click.stop="toggleDropdownRoomType"
           >
             <span class="form__tag">
@@ -31,7 +32,10 @@
 
           <div
             class="form__dropdown"
-            :class="{ 'is-active': isActiveDropdownRoomType }"
+            :class="{
+              'is-active': isActiveDropdownRoomType,
+              form__dropdown_popup
+            }"
           >
             <span
               class="form__dropdown-item"
@@ -45,9 +49,9 @@
           <input type="hidden" v-model="roomType" />
         </div>
 
-        <div class="form__item form__item_main">
+        <div class="form__item" :class="form__item_main">
           <div
-            class="form__input form__input_radius-right"
+            class="form__input" :class="form__input_radius_right"
             @click="toggleDropdownNumberPeople($event)"
           >
             <span class="form__tag-inner"> взрослые {{ adults }} • </span>
@@ -63,7 +67,11 @@
 
           <div
             class="form__dropdown"
-            :class="{ 'is-active': isActiveDropdownNumberPeople }"
+            :class="{
+              'is-active': isActiveDropdownNumberPeople,
+              form__dropdown_popup,
+              form__dropdown_counter,
+            }"
             @click="prevent($event)"
           >
             <Counter
@@ -76,7 +84,7 @@
           <input type="hidden" v-model="children" />
         </div>
 
-        <div class="form__item form__item_main form__item_centered" v-show="step_1">
+        <div class="form__item form__item_centered" :class="form__item_main" v-show="step_1">
           <button
             class="btn btn_primary"
             :disabled="!time[0] || !roomType"
@@ -87,26 +95,26 @@
         </div>
       </div>
 
-      <div class="form__group form__group_main" v-show="step_2">
-        <div class="form__item form__item_main">
+      <div class="form__group" :class="form__group_main" v-show="step_2">
+        <div class="form__item" :class="form__item_main">
           <input
-            class="form__input form__input_radius-left"
+            class="form__input" :class="form__input_radius_left"
             type="text"
             placeholder="Имя"
           />
         </div>
 
-        <div class="form__item form__item_main">
+        <div class="form__item" :class="form__item_main">
           <input
-            class="form__input form__input_sharp"
+            class="form__input" :class="form__input_sharp"
             type="text"
             placeholder="Почта"
           />
         </div>
 
-        <div class="form__item form__item_main">
+        <div class="form__item" :class="form__item_main">
           <input
-            class="form__input form__input_radius-right"
+            class="form__input" :class="form__input_radius_right"
             type="text"
             placeholder="Телефон"
           />
@@ -122,7 +130,7 @@
       <label class="form__label-checkbox">
         <input class="form__checkbox" checked type="checkbox" />
 
-        <span class="form__checkbox-text">Cогласен с условиями </span>
+        <span class="form__checkbox-text" :class="form__checkbox_text_white">Cогласен с условиями </span>
 
         <a href="#" target="_blank" class="form__link">персональны данных</a>
       </label>
@@ -137,6 +145,17 @@ import "vue2-datepicker/locale/ru";
 import Counter from "../counter/Counter.vue";
 
 export default {
+  props: [
+    "popup_class",
+    "form__group_main",
+    "form__item_main",
+    "form__input_radius_left",
+    "form__input_sharp",
+    "form__input_radius_right",
+    "form__dropdown_popup",
+    "form__checkbox_text_white",
+    "form__dropdown_counter",
+    ],
   components: { DatePicker, Counter },
   data() {
     return {
@@ -170,6 +189,19 @@ export default {
     };
   },
   computed: {
+    modifierClasses() {
+      return {
+        'popup_class': popup_class,
+        'form__group_main':  this.form__group_main,
+        'form__item_main': this.form__item_main,
+        'form__input_radius-left': this.form__input_radius_left,
+        'form__input_sharp': this.form__input_sharp,
+        'form__input_radius-right': this.form__input_radius_right,
+        'form__dropdown_popup': this.form__dropdown_popup,
+        'form__checkbox-text_white': this.form__checkbox_text_white,
+        'form__dropdown_counter': this.form__dropdown_counter,
+      } 
+    },
     getDate: {
       get() {
         return this.time;
@@ -204,12 +236,12 @@ export default {
       this.isActiveDropdownRoomType = !this.isActiveDropdownRoomType;
     },
     toggleDropdownNumberPeople(event) {
-      event._isClickWithinDropDown = true;
+      event._isClickWithinDropPopupDropDown = true;
       this.isActiveDropdownRoomType = false;
       this.isActiveDropdownNumberPeople = !this.isActiveDropdownNumberPeople;
     },
     prevent(event) {
-      event._isClickWithinDropDown = true;
+      event._isClickWithinDropPopupDropDown = true;
     },
     doHiddenDropdown() {
       this.isActiveDropdownRoomType = false;
@@ -234,7 +266,7 @@ export default {
   },
   created() {
     document.addEventListener("click", (event) => {
-      if (event._isClickWithinDropDown) return;
+      if (event._isClickWithinDropPopupDropDown) return;
       this.doHiddenDropdown();
     });
   },
