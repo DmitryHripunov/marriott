@@ -1,0 +1,118 @@
+@import (reference) "../../less/variables.less";
+
+.user-content {
+  h1,
+  h2 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 800;
+  }
+
+  h1:not(:last-child),
+  h2:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  h3:not(:last-child) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  div:not(:last-child):not(.table-cell) {
+    margin-bottom: 32px;
+  }
+
+  .table-cell:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  p:not(:last-child),
+  ol:not(:last-child),
+  ul:not(:last-child),
+  li:not(:last-child),
+  img:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  p:not(:first-child),
+  ol:not(:first-child),
+  ul:not(:first-child),
+  li:not(:first-child),
+  img:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: cupcake;
+  }
+  ol li {
+    counter-increment: cupcake;
+    padding-left: 16px;
+    
+    li {
+      padding-left: 16px;
+    }
+  }
+  ol li:before {
+    content: counters(cupcake, ".") ". ";
+  }
+
+  ul {
+		li {
+			position: relative;
+			padding-left: 16px;
+
+			&:before {
+				position: absolute;
+				content: '';
+				display: block;
+				border-radius: 50%;
+				background-color: @dark;
+				width: 5px;
+				height: 5px;
+				left: 0;
+				top: 8px;
+			}
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+  .user-content {
+    h1,
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    h1:not(:last-child),
+    h2:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    h3:not(:last-child) {
+      margin-top: 16px;
+    }
+
+    ol li:last-child {
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      margin-top: 8px;
+    }
+
+    ul li:not(:last-child) {
+      margin-top: 8px;
+    }
+
+    div:not(:last-child):not(.table-cell) {
+      margin-bottom: 48px;
+    }
+
+    .table-cell:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
