@@ -1,14 +1,5 @@
 const agreementAnchors = $('.js-agreement-anchor');
 
-// if (agreementAnchors.length) {
-//   agreementAnchors.forEach((anchor) => {
-//     anchor.addEventListener('click', (e) => {
-//       const current = e.currentTarget();
-//       console.log(current);
-//     });
-//   });
-// }
-
 function scrollToBlock(e) {
   e.preventDefault();
   const href = $(this).attr('href');

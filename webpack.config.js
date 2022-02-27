@@ -255,6 +255,15 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/contacts.html',
+      filename: 'contacts.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
+    }),
   ],
 };
 

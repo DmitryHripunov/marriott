@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent-top">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="container">
+          <section class="contacts">
+            <h1 class="title title_h1 title_indent-md">Контакты</h1>
+
+            <div class="contacts__wrapper">
+              <div class="contacts__item">
+                <div class="contacts__item-img">
+                  <svg class="icon icon_color-secondary icon_size-28">
+                    <use xlink:href="#mobile"></use>
+                  </svg>
+                </div>
+
+                <div class="contacts__item-info">
+                  <div class="contacts__item-title">Телефон</div>
+
+                  <a href="tel:+78007008578" class="contacts__item-link">+7 (800) 700-85-78</a>
+
+                  <button class="link js-get-booking-popup contacts__item-link" data-target="#booking">Оставить заявку</button>
+                </div>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__item-img">
+                  <svg class="icon icon_color-secondary icon_size-28">
+                    <use xlink:href="#email"></use>
+                  </svg>
+                </div>
+
+                <div class="contacts__item-info">
+                  <div class="contacts__item-title">Почта</div>
+
+                  <a href="mailto:info@mariottsochi.ru" class="contacts__item-link">info@mariottsochi.ru</a>
+                </div>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__item-img">
+                  <svg class="icon icon_color-secondary icon_size-28">
+                    <use xlink:href="#pin"></use>
+                  </svg>
+                </div>
+
+                <div class="contacts__item-info">
+                  <div class="contacts__item-title">Адреса</div>
+
+                  <p class="contacts__item-text">
+                    Сочи, Набережная Времена года, 1, Красная Поляна
+                  </p>
+
+                  <a href="#" class="link contacts__item-link">Смотреть на карте</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/to-top/to-top.html')}
+    ${require('./common.blocks/popup/popup.html')}
+    ${require('./common.blocks/popup-thanks/popup-thanks.html')}
+  </div>
+</body>
+
+</html>
