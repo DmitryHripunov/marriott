@@ -1,12 +1,21 @@
 @import (reference) "../../less/variables.less";
 
 .grid-sticky {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0 32px;
+    align-items: flex-start;
+  }
+
   &__aside {
     padding: 24px;
     background: @secondary-light;
     @shadow-lg();
     border-radius: 20px;
-    display: inline-flex;
+    display: flex;
+    max-width: 384px;
+    width: 100%;
     flex-direction: column;
     grid-gap: 16px 0;
     margin-bottom: 32px;
@@ -17,11 +26,17 @@
     @hover-link();
     font-size: 12px;
   }
+
+  &__main {
+    flex: 1;
+  }
 }
 
 @media (min-width: @laptop) {
   .grid-sticky {
     &__aside {
+      position: sticky;
+      top: 90px;
       padding: 32px;
       margin-bottom: 0;
     }
