@@ -264,6 +264,15 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/rooms-and-prices.html',
+      filename: 'rooms-and-prices.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
+    }),
   ],
 };
 
