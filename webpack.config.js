@@ -273,6 +273,15 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/room.html',
+      filename: 'room.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
+    }),
   ],
 };
 

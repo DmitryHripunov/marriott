@@ -14,111 +14,9 @@
     }
   }
 
-  &__img-wrapper {
-    display: block;
-  }
-
   &__gallery {
     &:not(:last-child) {
       margin-bottom: 16px;
-    }
-  }
-
-  &__img {
-    display: block;
-    width: auto;
-    min-height: 194px;
-    max-height: 350px;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  &__pagination {
-    position: relative;
-    bottom: 0 !important;
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-
-    & 
-    .swiper-pagination-bullet {
-      display: block;
-      width: 6px;
-      height: 6px;
-      background: @gray-light;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: @secondary;
-    }
-  }
-
-  .benefits__button-prev::after,
-  .benefits__button-next::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    cursor: pointer;
-    top: 0;
-    width: 26px;
-    height: calc(100% - 22px);
-    transition: opacity .3s ease-in-out;
-    opacity: 0;
-  }
-  
-  .benefits__button-prev::after {
-    left: 0;
-    background: linear-gradient(270deg, rgba(3, 21, 35, 0) 0%, rgba(3, 21, 35, .4) 100%);
-  }
-  
-  .benefits__button-next::after {
-    right: 0;
-    background: linear-gradient(270deg, rgba(3, 21, 35, 0.4) 0%, rgba(3, 21, 35, 0) 100%);
-  }
-
-  .benefits__button-prev:hover::after,
-  .benefits__button-next:hover::after {
-    opacity: 1;
-  }
-
-  .benefits__button-prev::before,
-  .benefits__button-next::before {
-    content: "";
-    position: absolute;
-    cursor: pointer;
-    z-index: 2;
-    top: calc(50% - 22px);
-    border-left-width: 2px;
-    border-bottom-width: 2px;
-    border-bottom-color: @white;
-    border-left-color: @white;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    width: 12px;
-    height: 12px;
-    transition: border-color @transition;
-  }
-
-  .benefits__button-prev:active::before,
-  .benefits__button-next:active::before {
-    border-color: @primary;
-  }
-
-  .benefits__button-prev::before {
-    left: 10px;
-    transform: rotate(45deg);
-  }
-
-  .benefits__button-next::before {
-    right: 10px;
-    transform: rotate(-135deg);
-  }
-
-  .benefits__button-prev,
-  .benefits__button-next {
-    &.swiper-button-disabled {
-      display: none;
     }
   }
 
@@ -160,25 +58,6 @@
 
     &__info {
       margin: auto 0;
-    }
-
-    .benefits__button-prev::after,
-    .benefits__button-next::after {
-      width: 48px;
-    }
-
-    .benefits__button-prev::before,
-    .benefits__button-next::before {
-      width: 20px;
-      height: 20px;
-    }
-
-    .benefits__button-prev::before {
-      left: 16px;
-    }
-
-    .benefits__button-next::before {
-      right: 16px;
     }
 
     &__btn-wrapper {

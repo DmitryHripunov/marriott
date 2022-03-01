@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent-top">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Номера и цены</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">
+                Номер Делюкс
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="container">
+          <h1 class="title title_h1 title_indent-md">Номер Делюкс</h1>
+
+          <div class="room">
+            <div class="room__wrapper">
+              <div class="room__slider">
+                ${require('./common.blocks/swiper/swiper.html')}
+              </div>
+
+              <div class="room__info">
+                <div class="room__info-header">
+                  <p class="desc">
+                    <strong>Цена по запросу</strong>
+                  </p>
+
+                  <button class="btn btn_primary js-get-booking-popup" data-target="#booking">Заселиться в
+                    отель</button>
+                </div>
+
+                <div class="room__info-main">
+                  <p class="desc desc_indent-8">
+                    Площадь: 69 кв. м
+                  </p>
+
+                  <p class="desc desc_indent-8">
+                    Вместимость: до 2 гостей
+                  </p>
+                </div>
+
+                <div class="room__info-footer">
+                  <div class="room__adv">
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-1"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Wi-fi</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-2"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Бары/ Рестораны</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-3"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Парковка</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-4"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Кондиционер</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-5"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Халат</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-6"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Тапочки</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-7"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Фен</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-8"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Прачечная</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-9"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Спа/Сауна</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-10"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Диван</div>
+                    </div>
+                    
+                    <div class="room__adv-item">
+                      <svg class="icon icon_size-24 icon_color-secondary">
+                        <use xlink:href="#adv-11"></use>
+                      </svg>
+
+                      <div class="room__adv-name">Утюг</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/to-top/to-top.html')}
+    ${require('./common.blocks/popup/popup.html')}
+    ${require('./common.blocks/popup-thanks/popup-thanks.html')}
+  </div>
+</body>
+
+</html>
