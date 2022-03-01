@@ -8,12 +8,12 @@
 	}
 
 	&__slider {
-		max-width: 590px;
 		width: 100%;
+		margin: 0 auto;
 	}
 
 	&__info {
-		flex: 1 1 500px;
+		flex: 1 1 354px;
 	}
 
 	&__info-header {
@@ -42,13 +42,16 @@
 	}
 
 	&__adv-name {
-		// white-space: nowrap;
 		font-size: 14px;
 	}
 }
 
 @media (min-width: @laptop) {
 	.room {
+		&__slider {
+			max-width: 590px;
+		}
+
 		&__info-header {
 			margin-bottom: 32px;
 		}

@@ -282,6 +282,24 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/features.html',
+      filename: 'features.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/details.html',
+      filename: 'details.html',
+      minify: {
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      },
+    }),
   ],
 };
 

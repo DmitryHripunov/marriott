@@ -4,7 +4,6 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-
     grid-gap: 16px 32px;
   }
 
@@ -13,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: @secondary-light;
     border-radius: 8px;
     padding: 26px 16px;
@@ -29,12 +28,20 @@
   &__name {
     text-align: center;
   }
+
+  &__heading {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: @secondary;
+  }
 }
 
 @media (min-width: @laptop) {
   .adv {
     &__list {
-      flex: nowrap;
+      flex-wrap: nowrap;
     }
 
     &__item {
@@ -44,6 +51,11 @@
 
     &__name {
       font-size: 14px;
+    }
+
+    &__heading {
+      font-size: 24px;
+      line-height: 29px;
     }
   }
 }

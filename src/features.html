@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent-top">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">
+                Ресторан L’Olivo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="features">
+          <img class="features__img" src="${require('./common.blocks/features/img/features.jpg')}" alt="#">
+
+          <div class="container">
+            <div class="features__wrapper">
+              <div class="features__content">
+                <h2 class="title title_h2 title_indent-xs">Ресторан L’Olivo</h2>
+
+                <p class="features__desc">
+                  В L’Olivo пиццу делают на открытой кухне, чтобы гости могли наблюдать за процессом приготовления. Уютную атмосферу
+                  ресторана дополняет терраса с выходом к бассейну и видом на горы. В отдельной VIP-комнате удобно собраться небольшой
+                  компанией. А с понедельника по четверг пиццу можно заказать навынос со скидкой 20%. Каждый вторник и четверг с 18:00 до
+                  19:00 в L’Olivo проходит кулинарный мастер-класс для детей, где секретами приготовления пищи делится сам бренд-шеф «Сочи
+                  Марриотт Красная Поляна».
+                </p>
+
+                <a data-target="#booking" class="link js-get-booking-popup">Забронировать номер</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="any-questions">
+            <div class="any-questions__wrapper">
+              <div class="any-questions__title">Остались вопросы? Пишите — мы всегда на связи!</div>
+
+              <div class="social social_gap-sm">
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#WhatsApp"></use>
+                  </svg>
+
+                  <div class="social__name">Whats App</div>
+                </a>
+
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Viber"></use>
+                  </svg>
+
+                  <div class="social__name">Viber</div>
+                </a>
+
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Telegram"></use>
+                  </svg>
+
+                  <div class="social__name">Telegram</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/to-top/to-top.html')}
+    ${require('./common.blocks/popup/popup.html')}
+    ${require('./common.blocks/popup-thanks/popup-thanks.html')}
+  </div>
+</body>
+
+</html>

@@ -1,10 +1,31 @@
 @import (reference) "../../less/variables.less";
 
 .swiper {
+  &_row {
+    .swiper__img-wrapper,
+    .swiper__img {
+      border-radius: 8px;
+      height: 280px;
+    }
+    
+    .swiper__button-prev::after {
+      height: 280px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .swiper__button-next::after {
+      height: 280px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
   &__img-wrapper {
     display: block;
+    position: relative;
   }
-  
+
   &__img {
     display: block;
     width: auto;
@@ -15,14 +36,12 @@
   }
 
   &__pagination {
-    position: relative;
     bottom: 0 !important;
     display: flex;
     justify-content: center;
     margin-top: 16px;
 
-    & 
-    .swiper-pagination-bullet {
+    & .swiper-pagination-bullet {
       display: block;
       width: 6px;
       height: 6px;
@@ -44,18 +63,26 @@
     top: 0;
     width: 26px;
     height: calc(100% - 22px);
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     opacity: 0;
   }
-  
+
   &__button-prev::after {
     left: 0;
-    background: linear-gradient(270deg, rgba(3, 21, 35, 0) 0%, rgba(3, 21, 35, .4) 100%);
+    background: linear-gradient(
+      270deg,
+      rgba(3, 21, 35, 0) 0%,
+      rgba(3, 21, 35, 0.4) 100%
+    );
   }
-  
+
   &__button-next::after {
     right: 0;
-    background: linear-gradient(270deg, rgba(3, 21, 35, 0.4) 0%, rgba(3, 21, 35, 0) 100%);
+    background: linear-gradient(
+      270deg,
+      rgba(3, 21, 35, 0.4) 0%,
+      rgba(3, 21, 35, 0) 100%
+    );
   }
 
   &__button-prev:hover::after,
@@ -101,6 +128,11 @@
     &.swiper-button-disabled {
       display: none;
     }
+  }
+
+  &-slide__name {
+    font-weight: 800;
+    margin-top: 8px;
   }
 }
 

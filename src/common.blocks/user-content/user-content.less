@@ -49,7 +49,7 @@
   ol li {
     counter-increment: cupcake;
     padding-left: 16px;
-    
+
     li {
       padding-left: 16px;
     }
@@ -58,24 +58,44 @@
     content: counters(cupcake, ".") ". ";
   }
 
-  ul {
-		li {
-			position: relative;
-			padding-left: 16px;
+  ul:not(.user-content__list) {
+    li {
+      position: relative;
+      padding-left: 16px;
 
-			&:before {
-				position: absolute;
-				content: '';
-				display: block;
-				border-radius: 50%;
-				background-color: @dark;
-				width: 5px;
-				height: 5px;
-				left: 0;
-				top: 8px;
-			}
-		}
-	}
+      &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        border-radius: 50%;
+        background-color: @dark;
+        width: 5px;
+        height: 5px;
+        left: 0;
+        top: 8px;
+      }
+    }
+  }
+
+  &__list {
+    li {
+      position: relative;
+      padding-left: 24px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        z-index: 1;
+        left: 4px;
+        top: 2px;
+        width: 8px;
+        height: 14px;
+        border: solid @secondary;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 @media (min-width: @laptop) {
@@ -105,6 +125,13 @@
 
     ul li:not(:last-child) {
       margin-top: 8px;
+    }
+
+    &__list {
+      &_col {
+        column-count: 2;
+        column-gap: 32px;
+      }
     }
 
     div:not(:last-child):not(.table-cell) {
