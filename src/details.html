@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent-top">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">
+                Ресторан L’Olivo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="features">
+          <img class="features__img" src="${require('./common.blocks/features/img/features.jpg')}" alt="#">
+
+          <div class="container">
+            <div class="features__wrapper">
+              <div class="features__content">
+                <h2 class="title title_h2 title_indent-xs">В этом отеле</h2>
+
+                <div class="features__desc">
+                  <div class="user-content">
+                    <p>
+                      Ресторанное обслуживание:
+                    </p>
+
+                    <ul class="user-content__list">
+                      <li>Зона для барбекю и (или) пикника</li>
+                      <li>Обслуживание в номерах, круглосуточно</li>
+                      <li>Обслуживание в номерах</li>
+                      <li>Завтрак</li>
+                      <li>Завтрак «шведский стол», стоимость от 1500₽</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a data-target="#booking" class="link js-get-booking-popup">Забронировать номер</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="adv">
+            <ul class="adv__list">
+              <li class="adv__item adv__item_content-left">
+                <div class="adv__heading">Сезонные предложения в лобби-баре отеля</div>
+
+                <div class="adv__name adv__name_content-left">
+                  В лобби-баре Marriott помимо основного меню подают сезонные блюда из региональных продуктов. Бренд-шеф
+                  отеля,
+                  вдохновившись осенним настроением, подошёл к предложению творчески и угощает гостей специалитетами
+                  в авторской
+                  интерпретации.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="page-section">
+        <div class="container">
+          <h2 class="title title_h2 title_indent-md">Список заведений</h2>
+
+          <div class="card">
+            <div class="card__wrapper">
+              <div class="card__item">
+                <img src="${require('./common.blocks/hero/img/hero.jpg')}" alt="#" class="card__img">
+
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+
+                <p class="card__desc">
+                  Современный бар в лобби, где подаются фирменные коктейли, великолепное вино и осведающее пиво,
+                  идеально подходит для
+                  встреч с коллегами и друзьями. Здесь также широкий выбор превосходного чая, соков, смузи и легких
+                  закусок. Загляните
+                  сюда после насыщенного дня в Сочи.
+                </p>
+
+                <a href="tel:+78622455350" class="link">+7 862 245-53-50</a>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+
+                <p class="card__desc">
+                  Современный бар в лобби, где подаются фирменные коктейли, великолепное вино и осведающее пиво,
+                  идеально подходит для
+                  встреч с коллегами и друзьями. Здесь также широкий выбор превосходного чая, соков, смузи и легких
+                  закусок. Загляните
+                  сюда после насыщенного дня в Сочи.
+                </p>
+
+                <a href="tel:+78622455350" class="link">+7 862 245-53-50</a>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+
+                <p class="card__desc">
+                  Современный бар в лобби, где подаются фирменные коктейли, великолепное вино и осведающее пиво,
+                  идеально подходит для
+                  встреч с коллегами и друзьями. Здесь также широкий выбор превосходного чая, соков, смузи и легких
+                  закусок. Загляните
+                  сюда после насыщенного дня в Сочи.
+                </p>
+
+                <a href="tel:+78622455350" class="link">+7 862 245-53-50</a>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+              </div>
+            </div>
+
+            <button data-target="#booking" class="card__btn btn btn_primary js-get-booking-popup">
+              Заселиться в отель
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <h2 class="title title_h2 title_indent-md">Другие варианты рядом</h2>
+
+          <div class="card">
+            <div class="card__wrapper">
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+
+                <p class="card__desc">
+                  Современный бар в лобби, где подаются фирменные коктейли, великолепное вино и осведающее пиво,
+                  идеально подходит для
+                  встреч с коллегами и друзьями. Здесь также широкий выбор превосходного чая, соков, смузи и легких
+                  закусок. Загляните
+                  сюда после насыщенного дня в Сочи.
+                </p>
+
+                <a href="tel:+78622455350" class="link">+7 862 245-53-50</a>
+              </div>
+
+              <div class="card__item">
+                <img src="${require('./common.blocks/hero/img/hero.jpg')}" alt="#" class="card__img">
+
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+              </div>
+
+              <div class="card__item">
+                <h3 class="card__title">L’Olivo</h3>
+
+                <div class="card__tags">
+                  <div class="card__tags-item">Итальянская кухня</div>
+                  <div class="card__tags-item">Открыто на завтрак, обед и ужин</div>
+                  <div class="card__tags-item">Дресс-код: Элегантный повседневный</div>
+                </div>
+              </div>
+            </div>
+
+            <button data-target="#booking" class="card__btn btn btn_primary js-get-booking-popup">
+              Заселиться в отель
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-section">
+        <section class="benefits">
+          <div class="container">
+            <h2 class="title title_h2 title_center title_indent-md">Казино Сочи</h2>
+
+            <div class="benefits__wrapper">
+              <div class="benefits__element benefits__element_reverse">
+                <div class="benefits__gallery">
+                  ${require('./common.blocks/swiper/swiper.html')}
+                </div>
+
+                <div class="benefits__info">
+                  <p class="desc">
+                    Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                    крытый бассейн
+                    с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                    красоты и зону
+                    релаксации
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefits__element">
+                <div class="benefits__gallery">
+                  ${require('./common.blocks/swiper/swiper.html')}
+                </div>
+
+                <div class="benefits__info">
+                  <p class="desc">
+                    Роскошный спа-комплекс общей площадью 2 000 кв.м предлагает 12 процедурных и массажных кабинетов,
+                    крытый бассейн
+                    с детской зоной, джакузи, финскую и русскую сауны, турецкий хамам, фитнес-центр, витамин-бар, салон
+                    красоты и зону
+                    релаксации
+                  </p>
+
+                  <p class="desc">
+                    Атмосфера Soul Spa способствует обретению красоты и здоровья, физической и эмоциональной гармонии,
+                    восстановлению
+                    жизненного баланса
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefits__element benefits__element_reverse">
+                <div class="benefits__gallery">
+                  ${require('./common.blocks/swiper/swiper.html')}
+                </div>
+
+                <div class="benefits__info">
+                  <p class="desc">
+                    Роскошный
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="benefits__btn-wrapper">
+              <button class="btn btn_primary js-get-booking-popup" data-target="#booking">Заселиться в отель</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="any-questions">
+            <div class="any-questions__wrapper">
+              <div class="any-questions__title">Остались вопросы? Пишите — мы всегда на связи!</div>
+
+              <div class="social social_gap-sm">
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#WhatsApp"></use>
+                  </svg>
+
+                  <div class="social__name">Whats App</div>
+                </a>
+
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Viber"></use>
+                  </svg>
+
+                  <div class="social__name">Viber</div>
+                </a>
+
+                <a href="#" class="social__link">
+                  <svg class="icon icon_size-48 icon_db">
+                    <use xlink:href="#Telegram"></use>
+                  </svg>
+
+                  <div class="social__name">Telegram</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/to-top/to-top.html')}
+    ${require('./common.blocks/popup/popup.html')}
+    ${require('./common.blocks/popup-thanks/popup-thanks.html')}
+  </div>
+</body>
+
+</html>

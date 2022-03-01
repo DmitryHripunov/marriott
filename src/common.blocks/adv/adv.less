@@ -16,6 +16,10 @@
     background-color: @secondary-light;
     border-radius: 8px;
     padding: 26px 16px;
+
+    &_content-left {
+      align-items: flex-start;
+    }
   }
 
   &__svg {
@@ -25,7 +29,7 @@
     margin-bottom: 8px;
   }
 
-  &__name {
+  &__name:not(.adv__name_content-left) {
     text-align: center;
   }
 
