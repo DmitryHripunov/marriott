@@ -23,7 +23,9 @@
     "normalize.css": "^8.0.0",
     "swiper": "^4.5.1",
     "vue": "^2.5.16",
-    "vue2-datepicker": "^3.10.4"
+    "vue2-datepicker": "^3.10.4",
+    "inputmask": "^5.0.7",
+    "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
